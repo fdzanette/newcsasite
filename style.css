@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans:wght@300&display=swap');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.gg-instagram {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px
+ }
+ 
+ .gg-instagram::after,
+ .gg-instagram::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute
+ }
+ 
+ .gg-instagram::after {
+  border: 2px solid;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  top: 3px
+ }
+ 
+ .gg-instagram::before {
+  border-radius: 3px;
+  width: 2px;
+  height: 2px;
+  background: currentColor;
+  right: 1px;
+  top: 1px
+ } 
+
+body {
+  font-size: 100%;
+  background: rgb(15,8,65);
+  background: linear-gradient(90deg, rgba(15,8,65,1) 100%, rgba(98,0,255,1) 100%, rgba(53,53,148,1) 100%);
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+  width: 90%;
+  margin: auto;
+  border-bottom: solid 0.3px white;
+}
+
+.cabecalho-imagem {
+  max-height: 72px;
+}
+
+.cabecalho-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+.social-link {
+  color: white;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
+  color: white;
+  width: 100%;  
+  margin: auto;
+}
+
+.conteudo-principal {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-weight: 300;
+  justify-content: center;
+  text-align: justify;
+}
+
+.conteudo-principal-escrito {
+  padding: 10px;
+  margin: 10px;
+  text-align: justify;
+}
+
+.logo-img {
+  background-size: cover;
+  width: 90%;
+  margin: auto;
+}
+
+.img-body {
+  width: 100%;
+  margin: auto;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+.natacao-img {
+  width: 100%;
+  margin: auto;
+  background-size: cover;
+}
+
+.conteudo-principal-imagem {
+  width: 100%;
+  margin: auto;
+  background-size: cover;
+}
+
+.conteudo-principal-titulo {
+  padding: 20px;
+}
+
+.conteudo-secundario {
+  padding: 10px;
+  margin: 10px;
+  text-align: justify;
+}
+
+.conteudo-secundario-titulo {
+  padding: 20px;
+}
+
+.conteudo-terciario-titulo {
+  padding: 20px;
+  text-align: justify;
+}
+
+.conteudo-terciario {
+  padding: 10px;
+  margin: 10px;
+  text-align: justify;
+}
+
+.conteudo-terciario-itens {
+  list-style-type: none;
+}
+
+.conteudo-quarto {
+  padding: 10px;
+  margin: 10px;
+}
+
+.conteudo-quarto-titulo {
+  padding: 20px;
+}
+.rodape {
+  margin: 10px;
+  color: white;
+  text-align: right;
+}
+
+.conteudo-quarto-itens {
+  display: inline;
+}
+
+#tick-mark {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+#tick-mark::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 50%;
+  width: 3px;
+  background-color: #336699;
+  content: "";
+  transform: translateX(10px) rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+#tick-mark::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #336699;
+  content: "";
+  transform: translateX(10px) rotate(-45deg);
+  transform-origin: left bottom;
+}
