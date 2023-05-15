@@ -56,9 +56,9 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 6px;
-  width: 90%;
+  width: 95%;
   margin: auto;
   border-bottom: solid 0.3px white;
 }
@@ -87,21 +87,19 @@ body {
   justify-content: space-around;
   padding: 15px;
   color: white;
-  width: 100%;  
+  width: 95%;  
   margin: auto;
 }
 
 .conteudo-principal {
   font-family: 'Open Sans', sans-serif;
   color: white;
-  font-weight: 300;
-  justify-content: center;
-  text-align: justify;
 }
 
 .conteudo-principal-escrito {
+  width: 80%;
   padding: 10px;
-  margin: 10px;
+  margin: auto;
   text-align: justify;
 }
 
@@ -135,8 +133,9 @@ body {
 }
 
 .conteudo-secundario {
+  width: 80%;
   padding: 10px;
-  margin: 10px;
+  margin: auto;
   text-align: justify;
 }
 
@@ -150,8 +149,9 @@ body {
 }
 
 .conteudo-terciario {
+  width: 80%;
   padding: 10px;
-  margin: 10px;
+  margin: auto;
   text-align: justify;
 }
 
@@ -160,8 +160,9 @@ body {
 }
 
 .conteudo-quarto {
+  width: 80%;
   padding: 10px;
-  margin: 10px;
+  margin: auto;
 }
 
 .conteudo-quarto-titulo {
