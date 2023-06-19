@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  line-height: 28px;
 }
 
 .gg-instagram {
@@ -16,8 +17,6 @@
   border: 2px solid transparent;
   box-shadow: 0 0 0 2px;
   border-radius: 4px;
-  width: 10px;
-  height: 10px
  }
  
  .gg-instagram::after,
@@ -84,19 +83,23 @@ body {
 
 .cabecalho-links {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   align-items: center;
   color: white;
+  object-fit: cover;
 }
 
-.cabecalho-links a p {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 300;
+.cabecalho-links i {
+  object-fit: cover;
 }
 
 .social-link {
   color: white;
-  font-size: 1.4vw;
+  object-fit: cover;
+}
+
+.social-link > p {
+  margin-left: -50px;
 }
 
 .conteudo {
@@ -106,7 +109,6 @@ body {
   justify-content: space-around;
   padding: 15px;
   color: white;
-  width: 95%;  
   margin: 0 auto;
   margin-top: 75px;
 }
