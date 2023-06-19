@@ -59,7 +59,7 @@ body {
   padding: 6px;
   border-bottom: solid 0.01px white;
   transition: height .1s;
-  height: 83px;
+  height: 65px;
   background: #031569;
   position: fixed;
   top: 0;
@@ -195,9 +195,8 @@ body {
   text-align: center;
 }
 .rodape {
-  margin: 10px;
   color: white;
-  text-align: right;
+  text-align: center;
 }
 
 .conteudo-quarto-itens {
