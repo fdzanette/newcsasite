@@ -4,7 +4,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   text-decoration: none;
   line-height: 28px;
 }
@@ -114,8 +114,9 @@ body {
 }
 
 .conteudo-principal {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', serif;
   color: white;
+  font-weight: 100;
 }
 
 .conteudo-principal-escrito {
@@ -151,7 +152,7 @@ body {
 }
 
 .conteudo-principal-titulo {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 
