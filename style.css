@@ -7,7 +7,7 @@
   /*box-sizing: border-box;
   text-decoration: none;*/
   line-height: 28px;
-  background: rgba(10,23,53,255);
+  /*background: rgba(10,23,53,255);*/
 }
 
 p > strong  {
@@ -52,7 +52,9 @@ p > strong  {
 
 body {
   font-size: 100%;
-  background: rgba(10,23,53,255);
+  /* background: rgba(10,23,53,255);*/
+  background: #d9ddf0;
+  width: 100%;
  /* background: linear-gradient(90deg, rgba(15,8,65,1) 100%, rgba(98,0,255,1) 100%, rgba(53,53,148,1) 100%);
 */}
 
@@ -84,7 +86,6 @@ body {
 
 .cabecalho-imagem {
   max-height: 8vw;
-  opacity: 0.8;
 }
 
 .cabecalho-links {
@@ -114,15 +115,14 @@ p.social-link {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 15px;
-  color: white;
+  color: black;
   margin: 0 auto;
   margin-top: 75px;
 }
 
 .conteudo-principal {
   font-family: 'Roboto', serif;
-  color: white;
+  color: black;
   font-weight: 100;
 }
 
@@ -143,14 +143,12 @@ p.social-link {
   width: 100%;
   margin: auto;
   background-size: cover;
-  opacity: 0.7;
 }
 
 .natacao-img {
   width: 100%;
   margin: auto;
   background-size: cover;
-  opacity: 0.8;
 }
 
 .conteudo-principal-imagem {
@@ -217,8 +215,9 @@ p.social-link {
   text-align: center;
 }
 .rodape {
-  color: white;
+  color: black;
   text-align: center;
+  font-weight: bolder;
 }
 
 .conteudo-quarto-itens {
