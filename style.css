@@ -4,9 +4,14 @@
 * {
   margin: 0;
   padding: 0;
-  /*box-sizing: border-box;*/
-  text-decoration: none;
+  /*box-sizing: border-box;
+  text-decoration: none;*/
   line-height: 28px;
+  background: rgba(10,23,53,255);
+}
+
+p > strong  {
+  font-weight: bold;
 }
 
 .gg-instagram {
@@ -47,9 +52,10 @@
 
 body {
   font-size: 100%;
-  background: rgb(15,8,65);
-  background: linear-gradient(90deg, rgba(15,8,65,1) 100%, rgba(98,0,255,1) 100%, rgba(53,53,148,1) 100%);
-}
+  background: rgba(10,23,53,255);
+ /* background: linear-gradient(90deg, rgba(15,8,65,1) 100%, rgba(98,0,255,1) 100%, rgba(53,53,148,1) 100%);
+*/}
+
 
 .cabecalho {
   display: flex;
@@ -60,7 +66,7 @@ body {
   border-bottom: solid 0.01px white;
   transition: height .1s;
   height: 65px;
-  background: #031569;
+  background: #091531;
   position: fixed;
   top: 0;
   width: 100%;
@@ -98,8 +104,9 @@ body {
   object-fit: cover;
 }
 
-.social-link > p {
-  margin-left: -50px;
+
+p.social-link {
+  margin-top: 14px;
 }
 
 .conteudo {
@@ -143,6 +150,7 @@ body {
   width: 100%;
   margin: auto;
   background-size: cover;
+  opacity: 0.8;
 }
 
 .conteudo-principal-imagem {
@@ -154,6 +162,7 @@ body {
 .conteudo-principal-titulo {
   padding: 10px;
   text-align: center;
+  color: #ca000a;
 }
 
 .conteudo-secundario {
@@ -164,6 +173,19 @@ body {
 }
 
 .conteudo-secundario-titulo {
+  padding: 20px;
+  text-align: center;
+}
+
+.selec-orient {
+  padding: 20px;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  text-align: justify;
+}
+
+.selec-orient h2 {
   padding: 20px;
   text-align: center;
 }
