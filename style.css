@@ -4,8 +4,8 @@
 * {
   margin: 0;
   padding: 0;
-  /*box-sizing: border-box;
-  text-decoration: none;*/
+  /*box-sizing: border-box;*/
+  text-decoration: none;
   line-height: 28px;
   /*background: rgba(10,23,53,255);*/
 }
@@ -107,7 +107,7 @@ body {
 
 
 p.social-link {
-  margin-top: 14px;
+  margin-top: 15px;
 }
 
 .conteudo {
@@ -158,7 +158,7 @@ p.social-link {
 }
 
 .conteudo-principal-titulo {
-  padding: 10px;
+  padding: 6px;
   text-align: center;
   color: #ca000a;
 }
@@ -183,8 +183,7 @@ p.social-link {
   text-align: justify;
 }
 
-.selec-orient h2 {
-  padding: 20px;
+.selec-orient h2 {  
   text-align: center;
 }
 
@@ -227,8 +226,8 @@ p.social-link {
 #tick-mark {
   position: relative;
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 
 #tick-mark::before {
