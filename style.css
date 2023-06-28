@@ -6,7 +6,7 @@
   padding: 0;
   /*box-sizing: border-box;*/
   text-decoration: none;
-  line-height: 28px;
+  line-height: 26px;
   /*background: rgba(10,23,53,255);*/
 }
 
@@ -134,18 +134,21 @@ p.social-link {
 }
 
 .logo-img {
+  display: flex;
   background-size: cover;
-  width: 90%;
+  max-width: 100%;
   margin: auto;
 }
 
 .img-body {
-  width: 100%;
+  max-width: 100%;
   margin: auto;
   background-size: cover;
+  justify-content: center;
 }
 
 .natacao-img {
+  display: flex;
   width: 100%;
   margin: auto;
   background-size: cover;
@@ -217,6 +220,11 @@ p.social-link {
   color: black;
   text-align: center;
   font-weight: bolder;
+}
+
+.rodape-texto {
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
 .conteudo-quarto-itens {
