@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans:wght@300&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans:wght@300&display=swap');
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap');
+
+
 
 * {
   margin: 0;
@@ -121,9 +125,8 @@ p.social-link {
 }
 
 .conteudo-principal {
-  font-family: 'Noto Serif', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   color: black;
-  font-weight: 400;
 }
 
 .conteudo-principal-escrito {
