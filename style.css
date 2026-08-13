@@ -51,6 +51,12 @@ body {
 h1, h2, h3 {
   font-family: var(--font-heading);
   line-height: 1.2;
+  text-wrap: balance; /* equilibra títulos de várias linhas */
+}
+
+p {
+  /* evita "viúvas": uma única palavra sozinha na última linha */
+  text-wrap: pretty;
 }
 
 p > strong {

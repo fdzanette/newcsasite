@@ -45,7 +45,7 @@
     'vant-6': 'True fluency in English, today’s most important global language.',
 
     /* --- High School Placement --- */
-    'hs-intro': '<strong>High School Placement</strong> is the first step of an academic and athletic journey in the United States. CSA places student-athletes aged <strong>14 to 17</strong> in American high schools, where academics and sport grow side by side. It’s a stage that can later lead into College Placement, though it doesn’t have to.',
+    'hs-intro': '<strong>High School Placement</strong> is the first step of an academic and athletic journey in the United States. CSA places student-athletes aged <strong>14 to 17</strong> in American high schools, where academics and sport grow side by side. It’s a stage that can later lead into College Placement, though it doesn’t have&nbsp;to.',
     'hs-caminho-h': 'Your path to high school in the U.S. <i class="fa-solid fa-school-flag"></i>',
     'hs-caminho-p': 'An American high school is where it all starts. For students aged 14 to 17, it’s a chance to grow in the classroom, develop in their sport, and experience American culture early on — building a strong profile from day one that can open the door to future university opportunities.',
     'hs-avaliacao-h': 'Assessment <i class="fa-solid fa-clipboard-check"></i>',
