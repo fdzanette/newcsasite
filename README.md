@@ -15,7 +15,8 @@ O site apresenta dois produtos, um abaixo do outro na mesma página, com uma bar
 |---|---|
 | `index.html` | Página única com as duas abas (College / High School) e o FAQ. |
 | `style.css` | Estilos. As variáveis de cor, fonte e espaçamento ficam no bloco `:root` no topo. |
-| `script.js` | Destaque do link da seção em foco (scrollspy) e accordion do FAQ. As duas seções ficam sempre visíveis, uma abaixo da outra. |
+| `script.js` | Destaque do link da seção em foco (scrollspy), accordion do FAQ e animações de entrada ao rolar. As duas seções ficam sempre visíveis, uma abaixo da outra. |
+| `i18n.js` | Tradução PT/EN: abre em inglês automaticamente fora do Brasil (detecção por fuso horário) e traz o seletor manual PT \| EN. |
 | `server.js` | Servidor Express que serve os arquivos estáticos (usado no Heroku). |
 | `package.json` | Dependência (`express`) e script `start`. |
 | `Procfile` | Comando de processo web do Heroku (`web: node server.js`). |
@@ -47,6 +48,18 @@ Depois abra **http://localhost:3000**.
 - **WhatsApp:** o número aparece em links `https://wa.me/5511976562289` no cabeçalho e nos botões de CTA. Ao trocar o número, atualize todos os `wa.me/...` e o texto exibido.
 
 ---
+
+## Idiomas (PT / EN)
+
+O site é escrito em **português** (versão de origem, no `index.html`). O inglês vive no arquivo `i18n.js`.
+
+- **Automático:** ao ser acessado **fora do Brasil**, o site abre em inglês. A detecção usa o **fuso horário** do navegador (qualquer fuso que não seja do Brasil → inglês), sem depender de serviço externo.
+- **Manual:** o seletor **PT | EN** no cabeçalho permite trocar a qualquer momento; a escolha fica salva no navegador (`localStorage`) e passa a ter prioridade sobre a detecção automática.
+
+**Como editar/adicionar traduções:**
+1. No `index.html`, cada texto traduzível tem um atributo `data-i18n="chave"` (o conteúdo em português continua ali como origem).
+2. No `i18n.js`, o objeto `EN` mapeia cada `chave` para o texto em inglês. O valor pode conter HTML (ex.: `<strong>`, `<u>`, ícones `<i>`), igual ao português.
+3. Ao criar um novo bloco em português, adicione um `data-i18n="nova-chave"` no elemento e a entrada correspondente em `EN` no `i18n.js`. Sem entrada em inglês, o texto simplesmente permanece em português.
 
 ## Placeholders pendentes de conteúdo real
 

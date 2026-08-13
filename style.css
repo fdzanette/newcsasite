@@ -131,6 +131,41 @@ p > strong {
   font-weight: 600;
 }
 
+/* Seletor de idioma PT | EN */
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lang-btn {
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.lang-btn.lang-ativa {
+  background: #fff;
+  color: var(--color-header);
+}
+
+.lang-btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+}
+
 /* ============================================================
    NAVEGAÇÃO ENTRE SEÇÕES (âncoras sticky)
    ============================================================ */
