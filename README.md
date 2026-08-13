@@ -54,7 +54,7 @@ Depois abra **http://localhost:3000**.
 O site é escrito em **português** (versão de origem, no `index.html`). O inglês vive no arquivo `i18n.js`.
 
 - **Automático:** ao ser acessado **fora do Brasil**, o site abre em inglês. A detecção usa o **fuso horário** do navegador (qualquer fuso que não seja do Brasil → inglês), sem depender de serviço externo.
-- **Manual:** o seletor **PT | EN** no cabeçalho permite trocar a qualquer momento; a escolha fica salva no navegador (`localStorage`) e passa a ter prioridade sobre a detecção automática.
+- **Manual:** o seletor **PT | EN** no cabeçalho permite trocar a qualquer momento. A escolha vale apenas durante a sessão (`sessionStorage`); ao reabrir o site, a detecção por localização decide novamente — assim o comportamento automático nunca fica "preso" em um idioma.
 
 **Como editar/adicionar traduções:**
 1. No `index.html`, cada texto traduzível tem um atributo `data-i18n="chave"` (o conteúdo em português continua ali como origem).

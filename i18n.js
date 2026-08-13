@@ -45,9 +45,9 @@
     'vant-6': 'True fluency in English, today’s most important global language.',
 
     /* --- High School Placement --- */
-    'hs-intro': '<strong>High School Placement</strong> is the first step of an academic and athletic journey in the United States. CSA places student-athletes aged <strong>14 to 17</strong> — in any sport — in American high schools, where academics and sport grow side by side. It’s a stage that can later lead into College Placement, though it doesn’t have to.',
+    'hs-intro': '<strong>High School Placement</strong> is the first step of an academic and athletic journey in the United States. CSA places student-athletes aged <strong>14 to 17</strong> in American high schools, where academics and sport grow side by side. It’s a stage that can later lead into College Placement, though it doesn’t have to.',
     'hs-caminho-h': 'Your path to high school in the U.S. <i class="fa-solid fa-school-flag"></i>',
-    'hs-caminho-p': 'An American high school is where it all starts. For students aged 14 to 17, in any sport, it’s a chance to grow in the classroom, develop in their sport, and experience American culture early on — building a strong profile from day one that can open the door to future university opportunities.',
+    'hs-caminho-p': 'An American high school is where it all starts. For students aged 14 to 17, it’s a chance to grow in the classroom, develop in their sport, and experience American culture early on — building a strong profile from day one that can open the door to future university opportunities.',
     'hs-avaliacao-h': 'Assessment <i class="fa-solid fa-clipboard-check"></i>',
     'hs-avaliacao-p': '<u>An academic, athletic, and family assessment</u> to understand where the student stands, what they’re aiming for, and their family circumstances — before we recommend anything.',
     'hs-matching-h': 'School Matching <i class="fa-solid fa-people-arrows"></i>',
@@ -83,9 +83,15 @@
     }
   }
 
+  // Remove preferência antiga permanente (versões anteriores usavam localStorage),
+  // para que a detecção por localização volte a valer a cada visita.
+  try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+
   function detectarIdioma() {
+    // A escolha manual vale apenas durante a sessão (sessionStorage);
+    // ao reabrir o site, a detecção por localização decide de novo.
     var salvo = null;
-    try { salvo = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+    try { salvo = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
     if (salvo === 'pt' || salvo === 'en') return salvo;
 
     var brasil = estaNoBrasil();
@@ -145,7 +151,7 @@
   Array.prototype.forEach.call(botoes, function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
-      try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+      try { sessionStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
       aplicar(lang);
     });
   });
