@@ -664,6 +664,14 @@ p > strong {
 
   .cabecalho-imagem { max-height: 40px; }
 
+  /* Header em uma linha só: número do WhatsApp vira apenas ícone */
+  .cabecalho-links {
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  .wa-numero { display: none; }
+
   .abas-nav {
     flex-direction: column;
     align-items: stretch;
