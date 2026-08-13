@@ -1,21 +1,30 @@
 /* ============================================================
-   VARIÁVEIS GLOBAIS (cores, tipografia, espaçamento)
+   VARIÁVEIS GLOBAIS (cores, tipografia, espaçamento, sombras)
    ============================================================ */
 :root {
   /* Vermelho vinho — herança do logo, porém mais sóbrio. Uso moderado. */
   --color-primary: #7b1220;
   --color-primary-dark: #5c0d18;
-  --color-ink: #1a1a1a;          /* texto principal */
+  --color-ink: #1b1b1f;          /* texto principal */
+  --color-muted: #55555f;        /* texto secundário */
   --color-bg: #ffffff;           /* fundo da página (branco) */
+  --color-soft: #f6f7fb;         /* faixas/realces suaves */
   --color-header: #091531;       /* azul-marinho do cabeçalho (mantido) */
   --color-surface: #ffffff;      /* cartões/superfícies */
-  --color-border: #d0d4e4;
+  --color-border: #e6e8f0;
 
-  --font-heading: 'Noto Serif', Georgia, serif;
-  --font-body: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  --font-heading: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', Arial, sans-serif;
 
-  --section-spacing: 2.5rem;     /* respiro padrão entre seções */
+  --content-max: 1080px;
+  --section-spacing: 3rem;       /* respiro padrão entre seções */
+  --radius: 14px;
+  --radius-lg: 20px;
   --transition: 0.2s ease;
+
+  --shadow-sm: 0 1px 3px rgba(9,21,49,.06), 0 1px 2px rgba(9,21,49,.08);
+  --shadow: 0 8px 22px rgba(9,21,49,.10);
+  --shadow-lg: 0 18px 44px rgba(9,21,49,.16);
 }
 
 html {
@@ -27,6 +36,7 @@ html {
   padding: 0;
   text-decoration: none;
   line-height: 1.6;
+  box-sizing: border-box;
 }
 
 body {
@@ -35,10 +45,12 @@ body {
   width: 100%;
   font-family: var(--font-body);
   color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3 {
   font-family: var(--font-heading);
+  line-height: 1.2;
 }
 
 p > strong {
@@ -54,7 +66,6 @@ p > strong {
   align-items: center;
   justify-content: space-between;
   padding: 6px;
-  border-bottom: solid 0.01px white;
   transition: height .1s;
   height: 65px;
   background: var(--color-header);
@@ -63,15 +74,18 @@ p > strong {
   width: 100%;
   margin: 0 auto;
   z-index: 100;
+  box-shadow: 0 2px 12px rgba(9,21,49,.18);
 }
 
 .header-wrap {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100%;
   margin: 0 auto;
   width: 100%;
+  max-width: 1200px;
+  padding: 0 18px;
 }
 
 .cabecalho-logo-link {
@@ -80,45 +94,49 @@ p > strong {
 }
 
 .cabecalho-imagem {
-  max-height: 8vw;
+  max-height: 46px;
   min-height: 34px;
+  transition: transform var(--transition);
+}
+
+.cabecalho-logo-link:hover .cabecalho-imagem {
+  transform: scale(1.04);
 }
 
 .cabecalho-links {
   display: flex;
-  gap: 16px;
+  gap: 18px;
   align-items: center;
   color: white;
   flex-wrap: wrap;
 }
 
-.cabecalho-links i {
-  object-fit: cover;
-}
-
 .social-link {
-  color: white;
+  color: #fff;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  transition: color var(--transition);
+  font-size: 1.05rem;
+  transition: color var(--transition), transform var(--transition);
 }
 
 .social-link:hover {
-  color: var(--color-primary);
+  color: #ff6b78;
+  transform: translateY(-1px);
 }
 
 .social-link--whatsapp {
   font-size: 0.95rem;
   white-space: nowrap;
+  font-weight: 600;
 }
 
 /* ============================================================
-   ABAS (College Placement / High School Placement)
+   NAVEGAÇÃO ENTRE SEÇÕES (âncoras sticky)
    ============================================================ */
 .abas-nav {
   position: sticky;
-  top: 65px; /* logo abaixo do cabeçalho fixo */
+  top: 65px;
   z-index: 90;
   display: flex;
   gap: 10px;
@@ -126,9 +144,9 @@ p > strong {
   width: 100%;
   margin: 0 auto var(--section-spacing);
   padding: 12px 16px;
-  background: var(--color-bg);
+  background: rgba(255,255,255,.9);
+  backdrop-filter: saturate(160%) blur(8px);
   border-bottom: 1px solid var(--color-border);
-  flex-wrap: wrap;
 }
 
 .aba-btn {
@@ -141,15 +159,16 @@ p > strong {
   font-size: 1rem;
   padding: 12px 20px;
   border: 2px solid var(--color-primary);
-  border-radius: 8px;
+  border-radius: 999px;
   background: transparent;
   color: var(--color-primary);
   cursor: pointer;
-  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition), transform var(--transition);
 }
 
 .aba-btn:hover {
   background: rgba(123, 18, 32, 0.08);
+  transform: translateY(-1px);
 }
 
 .aba-btn:focus-visible {
@@ -160,17 +179,16 @@ p > strong {
 .aba-btn.aba-ativa {
   background: var(--color-primary);
   color: #fff;
-  box-shadow: 0 3px 8px rgba(123, 18, 32, 0.25);
+  box-shadow: 0 6px 16px rgba(123, 18, 32, 0.28);
 }
 
 /* ============================================================
-   CONTEÚDO PRINCIPAL
+   ESTRUTURA DO CONTEÚDO
    ============================================================ */
 .conteudo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   color: var(--color-ink);
   margin: 0 auto;
   margin-top: 90px;
@@ -179,7 +197,6 @@ p > strong {
 .conteudo-principal {
   color: var(--color-ink);
   width: 100%;
-  /* compensa o cabeçalho fixo + a barra de navegação sticky ao rolar até a âncora */
   scroll-margin-top: 140px;
 }
 
@@ -189,139 +206,253 @@ p > strong {
 
 /* Divisória entre as duas seções (ambas visíveis, uma abaixo da outra) */
 #panel-highschool {
-  border-top: 3px solid var(--color-border);
+  border-top: 1px solid var(--color-border);
   margin-top: var(--section-spacing);
   padding-top: var(--section-spacing);
+  background:
+    radial-gradient(1200px 240px at 50% 0, rgba(123,18,32,.05), transparent 70%);
 }
 
+/* Hero (bloco de abertura de cada seção) */
 .conteudo-principal-escrito {
-  width: 80%;
+  width: 88%;
+  max-width: 820px;
   padding: 10px;
-  margin: auto;
-  margin-bottom: var(--section-spacing);
-  text-align: justify;
-}
-
-.logo-img {
-  display: flex;
-  background-size: cover;
-  max-width: 100%;
-  margin: auto;
-  margin-bottom: var(--section-spacing);
-}
-
-.img-body {
-  max-width: 100%;
-  margin: auto;
-  background-size: cover;
-  justify-content: center;
-}
-
-.natacao-img {
-  display: flex;
-  width: 100%;
-  margin: auto;
-  margin-bottom: var(--section-spacing);
-  background-size: cover;
-}
-
-.conteudo-principal-imagem {
-  width: 100%;
-  margin: auto;
-  background-size: cover;
+  margin: 0 auto var(--section-spacing);
+  text-align: center;
 }
 
 .conteudo-principal-titulo {
-  padding: 6px;
+  padding: 6px 0 14px;
   text-align: center;
   color: var(--color-primary);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: clamp(2rem, 4.4vw, 3.1rem);
 }
 
-.conteudo-secundario {
-  width: 80%;
-  padding: 10px;
-  margin: auto;
-  margin-bottom: var(--section-spacing);
-  text-align: justify;
+.conteudo-principal-paragrafo {
+  color: var(--color-muted);
+  font-size: 1.08rem;
 }
 
-.conteudo-secundario-titulo {
-  padding: 20px;
-  text-align: center;
-}
-
-.selec-orient {
-  padding: 20px;
-  width: 80%;
-  margin: auto;
-  margin-bottom: var(--section-spacing);
-  text-align: justify;
-}
-
-.selec-orient h2 {
-  text-align: center;
-}
-
-.conteudo-terciario-titulo {
-  padding: 20px;
-  text-align: center;
-}
-
-.conteudo-terciario {
-  width: 80%;
-  padding: 10px;
-  margin: auto;
-  margin-bottom: var(--section-spacing);
-  text-align: justify;
-}
-
-.conteudo-terciario-itens {
-  list-style-type: none;
-  padding: 6px 0;
-}
-
-.conteudo-terciario-itens i {
-  color: var(--color-primary);
-}
-
+/* Blocos de texto */
+.conteudo-secundario,
+.conteudo-terciario,
 .conteudo-quarto {
-  width: 80%;
+  width: 88%;
+  max-width: var(--content-max);
   padding: 10px;
-  margin: auto;
-  margin-bottom: var(--section-spacing);
+  margin: 0 auto var(--section-spacing);
+  text-align: justify;
 }
 
+.conteudo-secundario-titulo,
+.conteudo-terciario-titulo,
 .conteudo-quarto-titulo {
-  padding: 20px;
+  padding: 8px 0 18px;
   text-align: center;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+}
+
+.conteudo-secundario-paragrafo {
+  color: var(--color-muted);
+}
+
+/* Rótulo "eyebrow" acima dos títulos (inspiração IMG Academy) */
+.eyebrow {
+  display: table;
+  margin: 0 auto 12px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: rgba(123, 18, 32, 0.08);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* Ícones de destaque nos títulos usam a cor primária, com moderação */
+.conteudo-secundario-titulo i,
+.conteudo-terciario-titulo i,
+.conteudo-quarto-titulo i,
+.selec-orient h2 i {
+  color: var(--color-primary);
+}
+
+/* ============================================================
+   GRID DE CARDS
+   ============================================================ */
+.cards-grid {
+  display: grid;
+  gap: 22px;
+  width: 100%;
+  margin-top: 26px;
+}
+
+.cards-2 { grid-template-columns: repeat(2, 1fr); }
+.cards-3 { grid-template-columns: repeat(3, 1fr); }
+.cards-4 { grid-template-columns: repeat(4, 1fr); }
+
+.card-item,
+.fator-card,
+.escola-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.card-item:hover,
+.fator-card:hover,
+.escola-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(123, 18, 32, 0.35);
+}
+
+/* Cards "Seleção/Orientação" e "Avaliação/School Matching" */
+.selec-orient.card-item {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  text-align: left;
+  border-top: 4px solid var(--color-primary);
+}
+
+.selec-orient.card-item h2 {
+  text-align: left;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selec-orient.card-item p {
+  color: var(--color-muted);
+}
+
+/* Selo de ícone com gradiente (inspiração Asimov) */
+.fator-icone,
+.escola-icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 18px rgba(123, 18, 32, 0.28);
+}
+
+.fator-card {
+  text-align: center;
+}
+
+.fator-card .fator-icone {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fator-card .conteudo-terciario-itens {
+  list-style: none;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.escola-card {
+  text-align: left;
+}
+
+.escola-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: var(--color-ink);
+}
+
+.escola-card p {
+  color: var(--color-muted);
+  font-size: 0.98rem;
+}
+
+/* ============================================================
+   IMAGENS COM MOLDURA + KEN BURNS (animação suave)
+   ============================================================ */
+.logo-img,
+.natacao-img {
+  position: relative;
+  display: block;
+  width: 92%;
+  max-width: var(--content-max);
+  margin: 0 auto var(--section-spacing);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.logo-img .img-body,
+.natacao-img .img-body {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(1.02);
+  animation: kenburns 26s ease-in-out infinite alternate;
+}
+
+@keyframes kenburns {
+  from { transform: scale(1.02); }
+  to   { transform: scale(1.10); }
 }
 
 .secao-parceiros {
   width: 100%;
   margin-top: var(--section-spacing);
+  display: flex;
+  justify-content: center;
 }
 
-/* Ícones de destaque nos títulos usam a cor primária, com moderação */
-.conteudo-secundario-titulo i,
-.selec-orient h2 i,
-.conteudo-terciario-titulo i,
-.conteudo-quarto-titulo i {
-  color: var(--color-primary);
+.secao-parceiros .conteudo-principal-imagem {
+  width: 92%;
+  max-width: var(--content-max);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
 }
 
 /* ============================================================
-   LISTA DE VANTAGENS (substitui os antigos #tick-mark duplicados)
+   LISTA DE VANTAGENS (cartões de check em 2 colunas)
    ============================================================ */
 .lista-vantagens {
   list-style: none;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 24px;
+  margin: 8px auto 0;
   padding: 0;
 }
 
 .lista-vantagens .tick-mark {
   position: relative;
-  padding-left: 34px;
-  margin-bottom: 14px;
+  padding: 16px 18px 16px 50px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-ink);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.lista-vantagens .tick-mark:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
 }
 
 .lista-vantagens .tick-mark::before {
@@ -329,20 +460,28 @@ p > strong {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   position: absolute;
-  left: 0;
-  top: 2px;
+  left: 18px;
+  top: 16px;
   color: var(--color-primary);
 }
 
 /* ============================================================
-   FAQ (accordion simples)
+   FAQ (accordion)
    ============================================================ */
+.faq-bloco { max-width: 860px; }
+
 .faq-item {
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius);
   background: var(--color-surface);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+
+.faq-item:hover {
+  box-shadow: var(--shadow);
 }
 
 .faq-pergunta {
@@ -352,10 +491,10 @@ p > strong {
   justify-content: space-between;
   gap: 12px;
   text-align: left;
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 1rem;
-  padding: 16px 18px;
+  font-size: 1.02rem;
+  padding: 18px 20px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -383,71 +522,95 @@ p > strong {
 }
 
 .faq-resposta {
-  padding: 0 18px 18px;
+  padding: 0 20px 20px;
 }
 
 .faq-resposta p {
   text-align: justify;
+  color: var(--color-muted);
 }
 
 /* ============================================================
-   BOTÕES (mantém as classes Bootstrap btn/btn-danger,
-   apenas suaviza a cor para o vermelho vinho)
+   BOTÕES (mantém classes Bootstrap btn/btn-danger)
    ============================================================ */
 .cta-grupo {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 18px;
+  margin-top: 22px;
 }
 
 .btn-danger {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
-  transition: background-color var(--transition), border-color var(--transition);
+  border-radius: 999px;
+  padding: 12px 26px;
+  box-shadow: 0 8px 18px rgba(123, 18, 32, 0.22);
+  transition: background-color var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .btn-danger:hover,
 .btn-danger:focus {
   background-color: var(--color-primary-dark);
   border-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(123, 18, 32, 0.32);
+}
+
+/* ============================================================
+   ANIMAÇÃO DE ENTRADA AO ROLAR (aplicada via JS)
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
 /* ============================================================
    RODAPÉ
    ============================================================ */
 .rodape {
-  color: var(--color-ink);
+  color: #fff;
   text-align: center;
-  font-weight: bolder;
-  padding: 16px 0;
+  font-weight: 600;
+  padding: 26px 16px;
+  margin-top: var(--section-spacing);
+  background: var(--color-header);
 }
 
 .rodape-texto {
-  margin-top: 5px;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 /* ============================================================
    UTILITÁRIO
    ============================================================ */
-.hidden {
-  display: none !important;
-}
+.hidden { display: none !important; }
 
 /* ============================================================
    RESPONSIVO
    ============================================================ */
-@media (max-width: 768px) {
-  .cabecalho-imagem {
-    max-height: 42px;
-  }
+@media (max-width: 1024px) {
+  .cards-3,
+  .cards-4 { grid-template-columns: repeat(2, 1fr); }
+}
 
-  /* Abas viram botões empilhados de largura total */
+@media (max-width: 768px) {
+  :root { --section-spacing: 2.25rem; }
+
+  .cabecalho-imagem { max-height: 40px; }
+
   .abas-nav {
     flex-direction: column;
-    width: 90%;
+    align-items: stretch;
+    width: 100%;
   }
 
   .aba-btn {
@@ -458,7 +621,28 @@ p > strong {
     padding: 14px 16px;
   }
 
-  .social-link--whatsapp {
-    font-size: 0.85rem;
+  .cards-2,
+  .cards-3,
+  .cards-4 { grid-template-columns: 1fr; }
+
+  .lista-vantagens { grid-template-columns: 1fr; }
+
+  .social-link--whatsapp { font-size: 0.85rem; }
+}
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .logo-img .img-body,
+  .natacao-img .img-body {
+    animation: none;
+    transform: none;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none;
   }
 }
