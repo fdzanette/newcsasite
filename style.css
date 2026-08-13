@@ -1,68 +1,49 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans:wght@300&display=swap');
-@import url('https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap');
+/* ============================================================
+   VARIÁVEIS GLOBAIS (cores, tipografia, espaçamento)
+   ============================================================ */
+:root {
+  /* Vermelho vinho — herança do logo, porém mais sóbrio. Uso moderado. */
+  --color-primary: #7b1220;
+  --color-primary-dark: #5c0d18;
+  --color-ink: #1a1a1a;          /* texto principal */
+  --color-bg: #d9ddf0;           /* fundo da página (mantido) */
+  --color-header: #091531;       /* azul-marinho do cabeçalho (mantido) */
+  --color-surface: #ffffff;      /* cartões/superfícies */
+  --color-border: #d0d4e4;
 
+  --font-heading: 'Noto Serif', Georgia, serif;
+  --font-body: 'Montserrat', 'Segoe UI', Arial, sans-serif;
 
+  --section-spacing: 2.5rem;     /* respiro padrão entre seções */
+  --transition: 0.2s ease;
+}
 
 * {
   margin: 0;
   padding: 0;
-  /*box-sizing: border-box;*/
   text-decoration: none;
-  line-height: 26px;
-  /*background: rgba(10,23,53,255);*/
+  line-height: 1.6;
 }
-
-p > strong  {
-  font-weight: bold;
-}
-
-.gg-instagram {
-  box-sizing: border-box;
-  position: relative;
-  display: block;
-  transform: scale(var(--ggs,1));
-  border: 2px solid transparent;
-  box-shadow: 0 0 0 2px;
-  border-radius: 4px;
- }
- 
- .gg-instagram::after,
- .gg-instagram::before {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  position: absolute
- }
- 
- .gg-instagram::after {
-  border: 2px solid;
-  left: 3px;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  top: 3px
- }
- 
- .gg-instagram::before {
-  border-radius: 3px;
-  width: 2px;
-  height: 2px;
-  background: currentColor;
-  right: 1px;
-  top: 1px
- } 
 
 body {
   font-size: 100%;
-  /* background: rgba(10,23,53,255);*/
-  background: #d9ddf0;
+  background: var(--color-bg);
   width: 100%;
- /* background: linear-gradient(90deg, rgba(15,8,65,1) 100%, rgba(98,0,255,1) 100%, rgba(53,53,148,1) 100%);
-*/}
+  font-family: var(--font-body);
+  color: var(--color-ink);
+}
 
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
 
+p > strong {
+  font-weight: 700;
+}
+
+/* ============================================================
+   CABEÇALHO
+   ============================================================ */
 .cabecalho {
   display: flex;
   flex-direction: row;
@@ -72,11 +53,12 @@ body {
   border-bottom: solid 0.01px white;
   transition: height .1s;
   height: 65px;
-  background: #091531;
+  background: var(--color-header);
   position: fixed;
   top: 0;
   width: 100%;
   margin: 0 auto;
+  z-index: 100;
 }
 
 .header-wrap {
@@ -88,16 +70,22 @@ body {
   width: 100%;
 }
 
+.cabecalho-logo-link {
+  display: inline-flex;
+  align-items: center;
+}
+
 .cabecalho-imagem {
   max-height: 8vw;
+  min-height: 34px;
 }
 
 .cabecalho-links {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   align-items: center;
   color: white;
-  object-fit: cover;
+  flex-wrap: wrap;
 }
 
 .cabecalho-links i {
@@ -106,33 +94,91 @@ body {
 
 .social-link {
   color: white;
-  object-fit: cover;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color var(--transition);
 }
 
-
-p.social-link {
-  margin-top: 15px;
+.social-link:hover {
+  color: var(--color-primary);
 }
 
+.social-link--whatsapp {
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   ABAS (College Placement / High School Placement)
+   ============================================================ */
+.abas-nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: 90%;
+  max-width: 720px;
+  margin: 0 auto var(--section-spacing);
+  flex-wrap: wrap;
+}
+
+.aba-btn {
+  flex: 1 1 auto;
+  min-width: 200px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+}
+
+.aba-btn:hover {
+  background: rgba(123, 18, 32, 0.08);
+}
+
+.aba-btn:focus-visible {
+  outline: 3px solid rgba(123, 18, 32, 0.4);
+  outline-offset: 2px;
+}
+
+.aba-btn.aba-ativa {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(123, 18, 32, 0.25);
+}
+
+/* ============================================================
+   CONTEÚDO PRINCIPAL
+   ============================================================ */
 .conteudo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  color: black;
+  color: var(--color-ink);
   margin: 0 auto;
-  margin-top: 75px;
+  margin-top: 90px;
 }
 
 .conteudo-principal {
-  font-family: 'Public Sans', sans-serif;
-  color: black;
+  color: var(--color-ink);
+  width: 100%;
+}
+
+.conteudo-principal.hidden {
+  display: none;
 }
 
 .conteudo-principal-escrito {
   width: 80%;
   padding: 10px;
   margin: auto;
+  margin-bottom: var(--section-spacing);
   text-align: justify;
 }
 
@@ -141,6 +187,7 @@ p.social-link {
   background-size: cover;
   max-width: 100%;
   margin: auto;
+  margin-bottom: var(--section-spacing);
 }
 
 .img-body {
@@ -154,6 +201,7 @@ p.social-link {
   display: flex;
   width: 100%;
   margin: auto;
+  margin-bottom: var(--section-spacing);
   background-size: cover;
 }
 
@@ -166,13 +214,14 @@ p.social-link {
 .conteudo-principal-titulo {
   padding: 6px;
   text-align: center;
-  color: #ca000a;
+  color: var(--color-primary);
 }
 
 .conteudo-secundario {
   width: 80%;
   padding: 10px;
   margin: auto;
+  margin-bottom: var(--section-spacing);
   text-align: justify;
 }
 
@@ -183,13 +232,13 @@ p.social-link {
 
 .selec-orient {
   padding: 20px;
-  text-align: center;
   width: 80%;
   margin: auto;
+  margin-bottom: var(--section-spacing);
   text-align: justify;
 }
 
-.selec-orient h2 {  
+.selec-orient h2 {
   text-align: center;
 }
 
@@ -202,27 +251,157 @@ p.social-link {
   width: 80%;
   padding: 10px;
   margin: auto;
+  margin-bottom: var(--section-spacing);
   text-align: justify;
 }
 
 .conteudo-terciario-itens {
   list-style-type: none;
+  padding: 6px 0;
+}
+
+.conteudo-terciario-itens i {
+  color: var(--color-primary);
 }
 
 .conteudo-quarto {
   width: 80%;
   padding: 10px;
   margin: auto;
+  margin-bottom: var(--section-spacing);
 }
 
 .conteudo-quarto-titulo {
   padding: 20px;
   text-align: center;
 }
+
+.secao-parceiros {
+  width: 100%;
+  margin-top: var(--section-spacing);
+}
+
+/* Ícones de destaque nos títulos usam a cor primária, com moderação */
+.conteudo-secundario-titulo i,
+.selec-orient h2 i,
+.conteudo-terciario-titulo i,
+.conteudo-quarto-titulo i {
+  color: var(--color-primary);
+}
+
+/* ============================================================
+   LISTA DE VANTAGENS (substitui os antigos #tick-mark duplicados)
+   ============================================================ */
+.lista-vantagens {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.lista-vantagens .tick-mark {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 14px;
+}
+
+.lista-vantagens .tick-mark::before {
+  content: "\f00c"; /* fa-check */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--color-primary);
+}
+
+/* ============================================================
+   FAQ (accordion simples)
+   ============================================================ */
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.faq-pergunta {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-align: left;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 16px 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-ink);
+  transition: background var(--transition);
+}
+
+.faq-pergunta:hover {
+  background: rgba(123, 18, 32, 0.05);
+}
+
+.faq-pergunta:focus-visible {
+  outline: 3px solid rgba(123, 18, 32, 0.4);
+  outline-offset: -3px;
+}
+
+.faq-icone {
+  color: var(--color-primary);
+  transition: transform var(--transition);
+  flex-shrink: 0;
+}
+
+.faq-pergunta[aria-expanded="true"] .faq-icone {
+  transform: rotate(180deg);
+}
+
+.faq-resposta {
+  padding: 0 18px 18px;
+}
+
+.faq-resposta p {
+  text-align: justify;
+}
+
+/* ============================================================
+   BOTÕES (mantém as classes Bootstrap btn/btn-danger,
+   apenas suaviza a cor para o vermelho vinho)
+   ============================================================ */
+.cta-grupo {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.btn-danger {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+/* ============================================================
+   RODAPÉ
+   ============================================================ */
 .rodape {
-  color: black;
+  color: var(--color-ink);
   text-align: center;
   font-weight: bolder;
+  padding: 16px 0;
 }
 
 .rodape-texto {
@@ -230,37 +409,34 @@ p.social-link {
   margin-bottom: 0;
 }
 
-.conteudo-quarto-itens {
-  display: inline;
+/* ============================================================
+   UTILITÁRIO
+   ============================================================ */
+.hidden {
+  display: none !important;
 }
 
-#tick-mark {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-}
+/* ============================================================
+   RESPONSIVO
+   ============================================================ */
+@media (max-width: 768px) {
+  .cabecalho-imagem {
+    max-height: 42px;
+  }
 
-#tick-mark::before {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  height: 50%;
-  width: 3px;
-  background-color: #336699;
-  content: "";
-  transform: translateX(10px) rotate(-45deg);
-  transform-origin: left bottom;
-}
+  /* Abas viram botões empilhados de largura total */
+  .abas-nav {
+    flex-direction: column;
+    width: 90%;
+  }
 
-#tick-mark::after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 100%;
-  background-color: #336699;
-  content: "";
-  transform: translateX(10px) rotate(-45deg);
-  transform-origin: left bottom;
+  .aba-btn {
+    width: 100%;
+    min-width: 0;
+    padding: 14px 16px;
+  }
+
+  .social-link--whatsapp {
+    font-size: 0.85rem;
+  }
 }

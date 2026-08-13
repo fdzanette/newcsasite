@@ -15,43 +15,53 @@
     <meta name="description" content="A College Sports Authority é uma consultoria especializada em assessorar estudantes-atletas para os
             processos seletivos de universidades dos Estados Unidos, e os acompanha durante suas trajetórias universitárias, oferecendo suporte
             e criando oportunidades de desenvolvimento pessoal e profissional.">
-    <meta name="keywords" content="Bolsas, estudo, esportes, universidades, americanas, faculdade, college">            
+    <meta name="keywords" content="Bolsas, estudo, esportes, universidades, americanas, faculdade, college, high school">
     <title>College Sports Authority | Bolsas Esportivas nos Estados Unidos</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>-->
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome: uma única versão estável 6.x (substitui FA 4.7.0, FA 6.0.0-beta2 e css.gg) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Montserrat&family=Noto+Serif&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- Duas famílias apenas: Noto Serif (headings) + Montserrat (corpo/UI), pesos 400/600/700 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- style.css por último para vencer os padrões do Bootstrap (body, .btn-danger) -->
+    <link rel="stylesheet" type="text/css" href="style.css">
 
   </head>
   <body>
     <header class="cabecalho">
       <div class="header-wrap">
-        <img class="cabecalho-imagem" href="http://www.csauthority.com.br/" src="/images/Logo_red.png" alt="CSA Logo">
+        <a href="/" class="cabecalho-logo-link">
+          <img class="cabecalho-imagem" src="/images/Logo_red.png" alt="CSA Logo">
+        </a>
         <nav class="cabecalho-links">
-            <a class="social-link" href="https://www.instagram.com/csauthority/"> <i class="gg-instagram"></i></a>
-            <a class="social-link" href="https://www.facebook.com/collegesportsauthority/"> <i class="fab fa-facebook-f"></i></a>
-            <a class="social-link" href="mailto:gustavo@csauthority.com.br?subject=Contato"> <i class="fa fa-envelope"></i></a>
-            <i class="fab fa-whatsapp"></i><p class="social-link">(11) 976562289</p> 
+            <a class="social-link" href="https://www.instagram.com/csauthority/" target="_blank" rel="noopener" aria-label="Instagram"> <i class="fa-brands fa-instagram"></i></a>
+            <a class="social-link" href="https://www.facebook.com/collegesportsauthority/" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-brands fa-facebook-f"></i></a>
+            <a class="social-link" href="mailto:gustavo@csauthority.com.br?subject=Contato" aria-label="E-mail"> <i class="fa-solid fa-envelope"></i></a>
+            <a class="social-link social-link--whatsapp" href="https://wa.me/5511976562289" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i> (11) 97656-2289</a>
         </nav>
       </div>
     </header>
-    
+
     <main class="conteudo">
-      
-      <section class="conteudo-principal">
+
+      <!-- Seletor de abas: College Placement / High School Placement -->
+      <div class="abas-nav" role="tablist" aria-label="Serviços da CSA">
+        <button class="aba-btn aba-ativa" role="tab" id="tab-college" aria-selected="true" aria-controls="panel-college">College Placement</button>
+        <button class="aba-btn" role="tab" id="tab-highschool" aria-selected="false" aria-controls="panel-highschool" tabindex="-1">High School Placement</button>
+      </div>
+
+      <!-- ===================== ABA: COLLEGE PLACEMENT ===================== -->
+      <section class="conteudo-principal" id="panel-college" role="tabpanel" aria-labelledby="tab-college">
         <div class="conteudo-principal-escrito">
           <h1 class="conteudo-principal-titulo">College Sports Authority</h1>
           <p class="conteudo-principal-paragrafo">A <strong>College Sports Authority</strong> é uma consultoria especializada em assessorar estudantes-atletas para os
               processos seletivos de universidades dos Estados Unidos, e os acompanha durante suas trajetórias universitárias, oferecendo suporte
               e criando oportunidades de desenvolvimento pessoal e profissional.</p>
-          <div class="text-center">
-          <a href="mailto:gustavo@csauthority.com.br" type="button" class="btn btn-danger"><strong>Entre em contato</strong></a>
+          <div class="text-center cta-grupo">
+            <a href="mailto:gustavo@csauthority.com.br" type="button" class="btn btn-danger"><strong>Entre em contato</strong></a>
+            <a href="https://wa.me/5511976562289" target="_blank" rel="noopener" type="button" class="btn btn-danger"><strong><i class="fa-brands fa-whatsapp"></i> Fale no WhatsApp</strong></a>
           </div>
         </div>
         <div class="logo-img">
@@ -77,27 +87,139 @@
         </div>
         <div class="conteudo-terciario">
           <h2 class="conteudo-terciario-titulo">O valor da bolsa dependerá de alguns fatores:</h2>
-            <p class="conteudo-terciario-itens">Desempenho esportivo <i class="fas fa-swimmer"></i></p>
-            <p class="conteudo-terciario-itens">Nota nos exames de admissão (TOEFL/SAT) <i class='fa fa-edit'></i></p>
-            <p class="conteudo-terciario-itens">Histórico escolar <i class='fa fa-graduation-cap'></i></p>
-            <p class="conteudo-terciario-itens">Disponibilidade financeira da família <i class="fa fa-dollar"></i></p>
+            <p class="conteudo-terciario-itens">Desempenho esportivo <i class="fa-solid fa-person-swimming"></i></p>
+            <p class="conteudo-terciario-itens">Nota nos exames de admissão (TOEFL/SAT) <i class="fa-solid fa-pen-to-square"></i></p>
+            <p class="conteudo-terciario-itens">Histórico escolar <i class="fa-solid fa-graduation-cap"></i></p>
+            <p class="conteudo-terciario-itens">Disponibilidade financeira da família <i class="fa-solid fa-dollar-sign"></i></p>
         </div>
         <div class="natacao-img">
           <img class="img-body" src="/images/IMG-20190410-WA0024.jpg" alt="Swimmer">
         </div>
         <div class="conteudo-quarto">
           <h2 class="conteudo-quarto-titulo">Vantagens de fazer faculdade nos EUA:</h2>
-          <p class="conteudo-quarto-itens">Líder de sistema de ensino, com universidades conhecidas em nível mundial.<div id="tick-mark"></div></p>
-          <p class="conteudo-quarto-itens">Universidades com os melhores recursos para desenvolver o seu talento.<div id="tick-mark"></div></p>
-          <p class="conteudo-quarto-itens">Maior facilidade de acesso ao mercado de trabalho, graças ao prestígio das universidades e à experiência internacional.<div id="tick-mark"></div></p>
-          <p class="conteudo-quarto-itens">Bolsas por meio de prática de esportes.<div id="tick-mark"></div></p>
-          <p class="conteudo-quarto-itens">Experiência única no país mais aberto e desenvolvido do mundo.<div id="tick-mark"></div></p>
-          <p class="conteudo-quarto-itens">Domínio do inglês, o idioma mais importante do mundo.<div id="tick-mark"></div></p>
+          <ul class="lista-vantagens">
+            <li class="tick-mark">Líder de sistema de ensino, com universidades conhecidas em nível mundial.</li>
+            <li class="tick-mark">Universidades com os melhores recursos para desenvolver o seu talento.</li>
+            <li class="tick-mark">Maior facilidade de acesso ao mercado de trabalho, graças ao prestígio das universidades e à experiência internacional.</li>
+            <li class="tick-mark">Bolsas por meio de prática de esportes.</li>
+            <li class="tick-mark">Experiência única no país mais aberto e desenvolvido do mundo.</li>
+            <li class="tick-mark">Domínio do inglês, o idioma mais importante do mundo.</li>
+          </ul>
         </div>
       </section>
-      
-      <section>
-        <img class="conteudo-principal-imagem"src="/images/Partners.jpg" alt="Parceiros da CSA">
+
+      <!-- ===================== ABA: HIGH SCHOOL PLACEMENT ===================== -->
+      <section class="conteudo-principal hidden" id="panel-highschool" role="tabpanel" aria-labelledby="tab-highschool" hidden>
+        <div class="conteudo-principal-escrito">
+          <h1 class="conteudo-principal-titulo">High School Placement</h1>
+          <p class="conteudo-principal-paragrafo">O <strong>High School Placement</strong> é o primeiro degrau de uma trajetória acadêmica e esportiva nos Estados Unidos.
+              A CSA orienta estudantes-atletas de <strong>14 a 17 anos</strong> — de qualquer esporte — na colocação em high schools americanas, unindo
+              desenvolvimento escolar e esportivo. É uma etapa que pode, mais adiante e não obrigatoriamente, evoluir para o College Placement.</p>
+          <div class="text-center cta-grupo">
+            <a href="mailto:gustavo@csauthority.com.br?subject=High%20School%20Placement" type="button" class="btn btn-danger"><strong>Entre em contato</strong></a>
+            <a href="https://wa.me/5511976562289" target="_blank" rel="noopener" type="button" class="btn btn-danger"><strong><i class="fa-brands fa-whatsapp"></i> Fale no WhatsApp</strong></a>
+          </div>
+        </div>
+
+        <div class="conteudo-secundario">
+          <h2 class="conteudo-secundario-titulo">Caminho para a High School nos EUA <i class="fa-solid fa-school-flag"></i></h2>
+          <p class="conteudo-secundario-paragrafo">Estudar em uma high school americana é o primeiro degrau de uma jornada acadêmica e esportiva nos Estados Unidos.
+          Para estudantes-atletas de 14 a 17 anos, de qualquer esporte, é a oportunidade de amadurecer academicamente, evoluir dentro do próprio esporte
+          e vivenciar a cultura americana ainda no ensino médio — construindo, desde cedo, um perfil sólido que pode abrir caminho para futuras oportunidades
+          universitárias.</p>
+        </div>
+
+        <div class="selec-orient">
+          <h2>Avaliação <i class="fa-solid fa-clipboard-check"></i></h2>
+          <p><u>acadêmica, esportiva e familiar</u> do estudante, para entender o momento do aluno, seus objetivos e o contexto da família antes de qualquer indicação.</p>
+        </div>
+        <div class="selec-orient">
+          <h2>School Matching <i class="fa-solid fa-people-arrows"></i></h2>
+          <p><u>identificação das escolas mais compatíveis</u> com o perfil do aluno — não a "mais famosa", e sim a mais adequada aos seus objetivos acadêmicos, esportivos e pessoais.</p>
+        </div>
+
+        <div class="logo-img">
+          <img class="img-body" src="/images/Golf1.jpg" alt="Estudante-atleta de golfe">
+        </div>
+
+        <div class="conteudo-terciario">
+          <h2 class="conteudo-terciario-titulo">Tipos de escola:</h2>
+            <p class="conteudo-terciario-itens"><strong>Public High School</strong> <i class="fa-solid fa-building-columns"></i><br>
+              Escolas públicas com programa de intercâmbio. Esportes individuais (tênis, natação, golfe) podem se beneficiar de uma day school perto de um clube ou academia especializada.</p>
+            <p class="conteudo-terciario-itens"><strong>Private High School</strong> <i class="fa-solid fa-chalkboard-user"></i><br>
+              Escolas particulares, muitas em regime de day school. Boa opção para esportes individuais que dependem de treino em um clube ou academia de referência próximos.</p>
+            <p class="conteudo-terciario-itens"><strong>Boarding School</strong> <i class="fa-solid fa-house-chimney-window"></i><br>
+              Internatos com estrutura integrada de estudo, moradia e esporte. Esportes coletivos (vôlei, basquete) tendem a se beneficiar desse ecossistema integrado.</p>
+        </div>
+
+        <!-- PLACEHOLDER: substituir por número real de alunos atendidos em high school (ex.: contador de alunos colocados) -->
+        <!-- PLACEHOLDER: substituir por depoimento real (nome, esporte e escola) de aluno de high school -->
+
+        <div class="conteudo-quarto faq-bloco">
+          <h2 class="conteudo-quarto-titulo">Perguntas frequentes <i class="fa-solid fa-circle-question"></i></h2>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" type="button" aria-expanded="false">
+              <span>A partir de qual idade posso aplicar?</span>
+              <i class="fa-solid fa-chevron-down faq-icone"></i>
+            </button>
+            <div class="faq-resposta" hidden>
+              <p>O High School Placement da CSA atende estudantes-atletas de <strong>14 a 17 anos</strong>. A idade ideal de entrada depende do ano escolar
+              do aluno no Brasil e dos seus objetivos acadêmicos e esportivos, algo que definimos juntos na etapa de Avaliação.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" type="button" aria-expanded="false">
+              <span>Preciso de prova de inglês?</span>
+              <i class="fa-solid fa-chevron-down faq-icone"></i>
+            </button>
+            <div class="faq-resposta" hidden>
+              <p>Em geral, sim. Muitas escolas pedem uma prova de proficiência como o <strong>Duolingo English Test</strong> ou o <strong>TOEFL Junior</strong>.
+              Para alunos que ainda estão desenvolvendo o idioma, várias escolas oferecem programas de <strong>ESL</strong> (English as a Second Language)
+              como apoio durante a adaptação. Os requisitos variam conforme a política de cada escola.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" type="button" aria-expanded="false">
+              <span>Existem bolsas em high school?</span>
+              <i class="fa-solid fa-chevron-down faq-icone"></i>
+            </button>
+            <div class="faq-resposta" hidden>
+              <p>Algumas escolas oferecem apoio financeiro em formatos como <strong>financial aid</strong>, <strong>merit aid</strong> e <strong>athletic aid</strong>,
+              sempre conforme a política de cada instituição. A existência e o valor de qualquer auxílio dependem do desempenho acadêmico, do desempenho esportivo
+              e do orçamento da família — não são garantidos.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" type="button" aria-expanded="false">
+              <span>A CSA garante vaga ou bolsa?</span>
+              <i class="fa-solid fa-chevron-down faq-icone"></i>
+            </button>
+            <div class="faq-resposta" hidden>
+              <p><strong>Não.</strong> A CSA não promete vaga garantida nem bolsa garantida. Nosso trabalho é orientar, avaliar o perfil e conectar o aluno às escolas
+              mais compatíveis, maximizando as chances. O resultado dependerá do <strong>desempenho esportivo</strong>, do <strong>desempenho acadêmico</strong> e do
+              <strong>orçamento da família</strong>, além da política de cada escola.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" type="button" aria-expanded="false">
+              <span>Depois da high school dá para seguir para uma bolsa de faculdade?</span>
+              <i class="fa-solid fa-chevron-down faq-icone"></i>
+            </button>
+            <div class="faq-resposta" hidden>
+              <p>Sim. A high school americana é uma preparação natural para o próximo passo. Quem deseja seguir para a universidade nos EUA pode dar continuidade com o
+              <strong>College Placement</strong> já oferecido pela CSA, aproveitando toda a experiência acadêmica e esportiva construída no ensino médio.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="secao-parceiros">
+        <img class="conteudo-principal-imagem" src="/images/Partners.jpg" alt="Parceiros da CSA">
       </section>
     </main>
 
@@ -106,5 +228,7 @@
         <p class="rodape-texto">&copy; <strong>2024 College Sports Authority</strong></p>
       </div>
     </footer>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
