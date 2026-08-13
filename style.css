@@ -316,6 +316,20 @@ p > strong {
   color: var(--color-muted);
 }
 
+/* Padroniza os parágrafos de leitura: justificado nos dois idiomas,
+   com hifenização automática (respeita o lang PT/EN) para evitar
+   "buracos" entre as palavras em telas estreitas. */
+.conteudo-principal-paragrafo,
+.conteudo-secundario-paragrafo,
+.selec-orient.card-item p,
+.escola-card p,
+.faq-resposta p {
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
 /* Rótulo "eyebrow" acima dos títulos (inspiração IMG Academy) */
 .eyebrow {
   display: table;
