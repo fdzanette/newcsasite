@@ -15,96 +15,128 @@
     <meta name="description" content="A College Sports Authority é uma consultoria especializada em assessorar estudantes-atletas para os
             processos seletivos de universidades dos Estados Unidos, e os acompanha durante suas trajetórias universitárias, oferecendo suporte
             e criando oportunidades de desenvolvimento pessoal e profissional.">
-    <meta name="keywords" content="Bolsas, estudo, esportes, universidades, americanas, faculdade, college">            
-    <title>College Sports Authority</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="keywords" content="Bolsas, estudo, esportes, universidades, americanas, faculdade, college, high school">
+    <title>College Sports Authority | Bolsas Esportivas nos Estados Unidos</title>
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome: uma única versão estável 6.x (substitui FA 4.7.0, FA 6.0.0-beta2 e css.gg) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Montserrat&family=Noto+Serif&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- Duas famílias: Poppins (títulos) + Inter (corpo/UI) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- style.css por último para vencer os padrões do Bootstrap (body, .btn-danger) -->
+    <link rel="stylesheet" type="text/css" href="style.css">
 
   </head>
   <body>
     <header class="cabecalho">
       <div class="header-wrap">
-        <img class="cabecalho-imagem" href="http://www.csauthority.com.br/" src="/images/Logo_red.png" alt="CSA Logo">
+        <a href="/" class="cabecalho-logo-link">
+          <img class="cabecalho-imagem" src="/images/Logo_red.png" alt="CSA Logo">
+        </a>
         <nav class="cabecalho-links">
-            <a class="social-link" href="https://www.instagram.com/csauthority/"> <i class="gg-instagram"></i></a>
-            <a class="social-link" href="https://www.facebook.com/collegesportsauthority/"> <i class="fab fa-facebook-f"></i></a>
-            <a class="social-link" href="mailto:gustavo@csauthority.com.br?subject=Contato"> <i class="fa fa-envelope"></i></a>
-            <i class="fab fa-whatsapp"></i><p class="social-link">(11) 976562289</p> 
+            <div class="lang-switch" role="group" aria-label="Idioma / Language">
+              <button type="button" class="lang-btn lang-ativa" data-lang="pt" aria-pressed="true">PT</button>
+              <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+            </div>
+            <a class="social-link" href="https://www.instagram.com/csauthority/" target="_blank" rel="noopener" aria-label="Instagram"> <i class="fa-brands fa-instagram"></i></a>
+            <a class="social-link" href="https://www.facebook.com/collegesportsauthority/" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-brands fa-facebook-f"></i></a>
+            <a class="social-link" href="mailto:gustavo@csauthority.com.br?subject=Contato" aria-label="E-mail"> <i class="fa-solid fa-envelope"></i></a>
+            <a class="social-link social-link--whatsapp" href="https://wa.me/5511976562289" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i><span class="wa-numero"> (11) 97656-2289</span></a>
         </nav>
       </div>
     </header>
-    
+
     <main class="conteudo">
-      
-      <section class="conteudo-principal">
+
+      <!-- ===================== SEÇÃO: COLLEGE PLACEMENT (principal) ===================== -->
+      <section class="conteudo-principal" id="panel-college" role="region" aria-labelledby="titulo-college" tabindex="-1">
         <div class="conteudo-principal-escrito">
-          <h1 class="conteudo-principal-titulo">College Sports Authority</h1>
-          <p class="conteudo-principal-paragrafo">A <strong>College Sports Authority</strong> é uma consultoria especializada em assessorar estudantes-atletas para os
+          <h1 class="conteudo-principal-titulo" id="titulo-college">College Sports Authority</h1>
+          <p class="conteudo-principal-paragrafo" data-i18n="col-intro">A <strong>College Sports Authority</strong> é uma consultoria especializada em assessorar estudantes-atletas para os
               processos seletivos de universidades dos Estados Unidos, e os acompanha durante suas trajetórias universitárias, oferecendo suporte
               e criando oportunidades de desenvolvimento pessoal e profissional.</p>
-          <div class="text-center">
-          <a href="mailto:gustavo@csauthority.com.br" type="button" class="btn btn-danger"><strong>Entre em contato</strong></a>
+          <div class="text-center cta-grupo">
+            <a href="mailto:gustavo@csauthority.com.br" type="button" class="btn btn-danger"><strong data-i18n="cta-contato">Entre em contato</strong></a>
+            <a href="https://wa.me/5511976562289" target="_blank" rel="noopener" type="button" class="btn btn-danger"><strong data-i18n="cta-whatsapp"><i class="fa-brands fa-whatsapp"></i> Fale no WhatsApp</strong></a>
           </div>
         </div>
         <div class="logo-img">
           <img class="img-body" src="/images/IMG-20190516-WA0014.jpg" alt="CSA Sports">
         </div>
         <div class="conteudo-secundario">
-          <h2 class="conteudo-secundario-titulo">Caminho para a faculdade <i class="fa-solid fa-arrow-trend-up"></i></h2>
-          <p class="conteudo-secundario-paragrafo">Orientação para que o estudante desenvola suas habilidades e apresentação, a fim de se tornar o melhor candidato para avaliação
+          <span class="eyebrow">College Placement</span>
+          <h2 class="conteudo-secundario-titulo" data-i18n="col-caminho-h">Caminho para a faculdade <i class="fa-solid fa-arrow-trend-up"></i></h2>
+          <p class="conteudo-secundario-paragrafo" data-i18n="col-caminho-p">Orientação para que o estudante desenvola suas habilidades e apresentação, a fim de se tornar o melhor candidato para avaliação
           das universidades escolhidas, maximizando suas chances de ser aceito. Suporte durante o processo de admissão, como: identificação de pré-requisitos
           e prazos, planejamento de envio de documentos, conferência e envio dos pacotes de candidatura. Acompanhamento durante os quatro anos de faculdade com
           orientações para situações do dia a dia e suporte à adaptação intercultural.</p>
         </div>
-        <div class="selec-orient">
-          <h2>Seleção <i class="fa-solid fa-magnifying-glass"></i></h2>
-          <p><u>das opções de universidades </u>mais adequadas ao perfil do atleta, buscando oportunidades de bolsas de estudos.</p>
-        </div>
-        <div class="selec-orient">
-          <h2>Orientação <i class="fa-solid fa-landmark"></i></h2>
-          <p><u>para que o atleta se prepare</u> adequadamente para ser apresentado para os treinadores das universidades selecionadas.</p>
+        <div class="conteudo-secundario">
+          <div class="cards-grid cards-2">
+            <div class="selec-orient card-item">
+              <h2 data-i18n="col-selecao-h">Seleção <i class="fa-solid fa-magnifying-glass"></i></h2>
+              <p data-i18n="col-selecao-p"><u>das opções de universidades </u>mais adequadas ao perfil do atleta, buscando oportunidades de bolsas de estudos.</p>
+            </div>
+            <div class="selec-orient card-item">
+              <h2 data-i18n="col-orientacao-h">Orientação <i class="fa-solid fa-landmark"></i></h2>
+              <p data-i18n="col-orientacao-p"><u>para que o atleta se prepare</u> adequadamente para ser apresentado para os treinadores das universidades selecionadas.</p>
+            </div>
+          </div>
         </div>
         <div class="logo-img">
           <img class="img-body" src="/images/CSA_Tennis.jpg" alt="Tennis player">
         </div>
         <div class="conteudo-terciario">
-          <h2 class="conteudo-terciario-titulo">O valor da bolsa dependerá de alguns fatores:</h2>
-            <p class="conteudo-terciario-itens">Desempenho esportivo <i class="fas fa-swimmer"></i></p>
-            <p class="conteudo-terciario-itens">Nota nos exames de admissão (TOEFL/SAT) <i class='fa fa-edit'></i></p>
-            <p class="conteudo-terciario-itens">Histórico escolar <i class='fa fa-graduation-cap'></i></p>
-            <p class="conteudo-terciario-itens">Disponibilidade financeira da família <i class="fa fa-dollar"></i></p>
+          <h2 class="conteudo-terciario-titulo" data-i18n="col-fatores-h">O valor da bolsa dependerá de alguns fatores:</h2>
+          <div class="cards-grid cards-4">
+            <div class="fator-card">
+              <span class="fator-icone"><i class="fa-solid fa-person-swimming"></i></span>
+              <p class="conteudo-terciario-itens" data-i18n="fator-desempenho">Desempenho esportivo</p>
+            </div>
+            <div class="fator-card">
+              <span class="fator-icone"><i class="fa-solid fa-pen-to-square"></i></span>
+              <p class="conteudo-terciario-itens" data-i18n="fator-exames">Nota nos exames de admissão (TOEFL/SAT)</p>
+            </div>
+            <div class="fator-card">
+              <span class="fator-icone"><i class="fa-solid fa-graduation-cap"></i></span>
+              <p class="conteudo-terciario-itens" data-i18n="fator-historico">Histórico escolar</p>
+            </div>
+            <div class="fator-card">
+              <span class="fator-icone"><i class="fa-solid fa-dollar-sign"></i></span>
+              <p class="conteudo-terciario-itens" data-i18n="fator-financeiro">Disponibilidade financeira da família</p>
+            </div>
+          </div>
         </div>
         <div class="natacao-img">
           <img class="img-body" src="/images/IMG-20190410-WA0024.jpg" alt="Swimmer">
         </div>
         <div class="conteudo-quarto">
-          <h2 class="conteudo-quarto-titulo">Vantagens de fazer faculdade nos EUA:</h2>
-          <p class="conteudo-quarto-itens">Líder de sistema de ensino, com universidades conhecidas em nível mundial.<div id="tick-mark"></div></p>
-          <p class="conteudo-quarto-itens">Universidades com os melhores recursos para desenvolver o seu talento.<div id="tick-mark"></div></p>
-          <p class="conteudo-quarto-itens">Maior facilidade de acesso ao mercado de trabalho, graças ao prestígio das universidades e à experiência internacional.<div id="tick-mark"></div></p>
-          <p class="conteudo-quarto-itens">Bolsas por meio de prática de esportes.<div id="tick-mark"></div></p>
-          <p class="conteudo-quarto-itens">Experiência única no país mais aberto e desenvolvido do mundo.<div id="tick-mark"></div></p>
-          <p class="conteudo-quarto-itens">Domínio do inglês, o idioma mais importante do mundo.<div id="tick-mark"></div></p>
+          <h2 class="conteudo-quarto-titulo" data-i18n="col-vantagens-h">Vantagens de fazer faculdade nos EUA:</h2>
+          <ul class="lista-vantagens">
+            <li class="tick-mark" data-i18n="vant-1">Líder de sistema de ensino, com universidades conhecidas em nível mundial.</li>
+            <li class="tick-mark" data-i18n="vant-2">Universidades com os melhores recursos para desenvolver o seu talento.</li>
+            <li class="tick-mark" data-i18n="vant-3">Maior facilidade de acesso ao mercado de trabalho, graças ao prestígio das universidades e à experiência internacional.</li>
+            <li class="tick-mark" data-i18n="vant-4">Bolsas por meio de prática de esportes.</li>
+            <li class="tick-mark" data-i18n="vant-5">Experiência única no país mais aberto e desenvolvido do mundo.</li>
+            <li class="tick-mark" data-i18n="vant-6">Domínio do inglês, o idioma mais importante do mundo.</li>
+          </ul>
         </div>
       </section>
-      
-      <section>
-        <img class="conteudo-principal-imagem"src="/images/New_parceiros.png" alt="Parceiros da CSA">
+
+      <section class="secao-parceiros">
+        <img class="conteudo-principal-imagem" src="/images/Partners.jpg" alt="Parceiros da CSA">
       </section>
     </main>
 
     <footer class="rodape">
       <div>
-        <p class="rodape-texto">&copy; <strong>2023 College Sports Authority</strong></p>
+        <p class="rodape-texto">&copy; <strong>2024 College Sports Authority</strong></p>
       </div>
     </footer>
+
+    <script src="i18n.js" defer></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
