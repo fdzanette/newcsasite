@@ -59,6 +59,18 @@ O site é escrito em **português** (versão de origem, no `index.html`). O ingl
 
 ---
 
+## Cache dos arquivos estáticos (importante ao publicar)
+
+Navegadores guardam `style.css`, `script.js` e `i18n.js` em cache. Para que os visitantes (que já acessaram o site antes) recebam a versão nova após uma atualização, esses arquivos têm um **número de versão** na URL, no `index.html`:
+
+```html
+<link rel="stylesheet" href="style.css?v=1">
+<script src="i18n.js?v=1" defer></script>
+<script src="script.js?v=1" defer></script>
+```
+
+**Sempre que alterar o `style.css`, `script.js` ou `i18n.js`, incremente o número** (`?v=1` → `?v=2`, e assim por diante) antes de publicar. Isso força o navegador a baixar a versão nova.
+
 ## Deploy no Heroku
 
 O app roda como site **PHP/estático** (buildpack PHP servindo os arquivos com Apache) — a mesma estrutura de sempre. Não há passo de build nem Node.
