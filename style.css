@@ -6,7 +6,7 @@
   --color-primary: #7b1220;
   --color-primary-dark: #5c0d18;
   --color-ink: #1a1a1a;          /* texto principal */
-  --color-bg: #d9ddf0;           /* fundo da página (mantido) */
+  --color-bg: #ffffff;           /* fundo da página (branco) */
   --color-header: #091531;       /* azul-marinho do cabeçalho (mantido) */
   --color-surface: #ffffff;      /* cartões/superfícies */
   --color-border: #d0d4e4;
@@ -16,6 +16,10 @@
 
   --section-spacing: 2.5rem;     /* respiro padrão entre seções */
   --transition: 0.2s ease;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -113,18 +117,25 @@ p > strong {
    ABAS (College Placement / High School Placement)
    ============================================================ */
 .abas-nav {
+  position: sticky;
+  top: 65px; /* logo abaixo do cabeçalho fixo */
+  z-index: 90;
   display: flex;
   gap: 10px;
   justify-content: center;
-  width: 90%;
-  max-width: 720px;
+  width: 100%;
   margin: 0 auto var(--section-spacing);
+  padding: 12px 16px;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
   flex-wrap: wrap;
 }
 
 .aba-btn {
-  flex: 1 1 auto;
+  flex: 0 1 300px;
   min-width: 200px;
+  max-width: 320px;
+  text-align: center;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 1rem;
@@ -168,10 +179,19 @@ p > strong {
 .conteudo-principal {
   color: var(--color-ink);
   width: 100%;
+  /* compensa o cabeçalho fixo + a barra de navegação sticky ao rolar até a âncora */
+  scroll-margin-top: 140px;
 }
 
-.conteudo-principal.hidden {
-  display: none;
+.conteudo-principal:focus {
+  outline: none;
+}
+
+/* Divisória entre as duas seções (ambas visíveis, uma abaixo da outra) */
+#panel-highschool {
+  border-top: 3px solid var(--color-border);
+  margin-top: var(--section-spacing);
+  padding-top: var(--section-spacing);
 }
 
 .conteudo-principal-escrito {
@@ -433,6 +453,8 @@ p > strong {
   .aba-btn {
     width: 100%;
     min-width: 0;
+    max-width: none;
+    flex: 1 1 auto;
     padding: 14px 16px;
   }
 

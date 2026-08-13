@@ -1,106 +1,75 @@
 /* ============================================================
-   CSA — navegação por abas + accordion de FAQ (JavaScript puro)
+   CSA — navegação por âncora com destaque + accordion de FAQ
+   (JavaScript puro)
+
+   As duas seções (College Placement e High School Placement) ficam
+   sempre visíveis, uma abaixo da outra, com College primeiro. Os links
+   do topo apenas rolam até a seção correspondente (scroll suave via CSS)
+   e o link da seção em foco fica destacado.
    ============================================================ */
 (function () {
   'use strict';
 
-  /* ---------- Abas: College Placement / High School Placement ---------- */
-  var abas = {
-    'college-placement': {
-      tab: document.getElementById('tab-college'),
-      panel: document.getElementById('panel-college')
-    },
-    'high-school-placement': {
-      tab: document.getElementById('tab-highschool'),
-      panel: document.getElementById('panel-highschool')
-    }
+  var links = {
+    'panel-college': document.getElementById('tab-college'),
+    'panel-highschool': document.getElementById('tab-highschool')
   };
 
-  var ordem = ['college-placement', 'high-school-placement'];
-
-  function ativarAba(chave, atualizarHash, focar) {
-    if (!abas[chave]) {
-      chave = 'college-placement';
-    }
-
-    ordem.forEach(function (k) {
-      var item = abas[k];
-      if (!item.tab || !item.panel) return;
-      var ativo = (k === chave);
-
-      item.tab.classList.toggle('aba-ativa', ativo);
-      item.tab.setAttribute('aria-selected', ativo ? 'true' : 'false');
-      item.tab.setAttribute('tabindex', ativo ? '0' : '-1');
-
-      item.panel.classList.toggle('hidden', !ativo);
+  function destacar(id) {
+    Object.keys(links).forEach(function (chave) {
+      var link = links[chave];
+      if (!link) return;
+      var ativo = (chave === id);
+      link.classList.toggle('aba-ativa', ativo);
       if (ativo) {
-        item.panel.removeAttribute('hidden');
+        link.setAttribute('aria-current', 'true');
       } else {
-        item.panel.setAttribute('hidden', '');
+        link.removeAttribute('aria-current');
       }
     });
-
-    if (atualizarHash) {
-      // history.replaceState evita empilhar entradas a cada clique
-      if (history.replaceState) {
-        history.replaceState(null, '', '#' + chave);
-      } else {
-        window.location.hash = chave;
-      }
-    }
-
-    if (focar && abas[chave].tab) {
-      abas[chave].tab.focus();
-    }
   }
 
-  function chaveDoHash() {
-    var hash = (window.location.hash || '').replace('#', '');
-    return abas[hash] ? hash : 'college-placement';
+  var paineis = ['panel-college', 'panel-highschool']
+    .map(function (id) { return document.getElementById(id); })
+    .filter(Boolean);
+
+  // Destaque automático conforme a seção mais visível (scrollspy)
+  if ('IntersectionObserver' in window && paineis.length) {
+    var visibilidade = {};
+    var observador = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        visibilidade[e.target.id] = e.intersectionRatio;
+      });
+      var melhor = null;
+      var maiorRazao = -1;
+      paineis.forEach(function (p) {
+        var r = visibilidade[p.id] || 0;
+        if (r > maiorRazao) {
+          maiorRazao = r;
+          melhor = p.id;
+        }
+      });
+      if (melhor) {
+        destacar(melhor);
+      }
+    }, {
+      // banda de detecção abaixo do cabeçalho fixo + barra sticky
+      rootMargin: '-140px 0px -40% 0px',
+      threshold: [0, 0.1, 0.25, 0.5, 0.75, 1]
+    });
+
+    paineis.forEach(function (p) { observador.observe(p); });
   }
 
-  ordem.forEach(function (chave, indice) {
-    var item = abas[chave];
-    if (!item.tab) return;
-
-    // Clique / toque
-    item.tab.addEventListener('click', function () {
-      ativarAba(chave, true, false);
-    });
-
-    // Navegação por teclado (setas, Home, End) — padrão ARIA de tablist
-    item.tab.addEventListener('keydown', function (e) {
-      var novoIndice = null;
-      switch (e.key) {
-        case 'ArrowRight':
-        case 'ArrowDown':
-          novoIndice = (indice + 1) % ordem.length;
-          break;
-        case 'ArrowLeft':
-        case 'ArrowUp':
-          novoIndice = (indice - 1 + ordem.length) % ordem.length;
-          break;
-        case 'Home':
-          novoIndice = 0;
-          break;
-        case 'End':
-          novoIndice = ordem.length - 1;
-          break;
-        default:
-          return;
-      }
-      e.preventDefault();
-      ativarAba(ordem[novoIndice], true, true);
-    });
+  // Clique: destaca de imediato (o scroll suave e o offset são do CSS)
+  Object.keys(links).forEach(function (id) {
+    var link = links[id];
+    if (link) {
+      link.addEventListener('click', function () {
+        destacar(id);
+      });
+    }
   });
-
-  // Link direto/compartilhável: reage a mudanças de hash
-  window.addEventListener('hashchange', function () {
-    ativarAba(chaveDoHash(), false, false);
-  });
-
-  // Estado inicial a partir da URL
-  ativarAba(chaveDoHash(), false, false);
 
   /* ---------- FAQ: accordion simples ---------- */
   var perguntas = document.querySelectorAll('.faq-pergunta');

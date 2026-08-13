@@ -46,16 +46,17 @@
 
     <main class="conteudo">
 
-      <!-- Seletor de abas: College Placement / High School Placement -->
-      <div class="abas-nav" role="tablist" aria-label="Serviços da CSA">
-        <button class="aba-btn aba-ativa" role="tab" id="tab-college" aria-selected="true" aria-controls="panel-college">College Placement</button>
-        <button class="aba-btn" role="tab" id="tab-highschool" aria-selected="false" aria-controls="panel-highschool" tabindex="-1">High School Placement</button>
-      </div>
+      <!-- Navegação entre os serviços: leva à seção correspondente na página
+           (as duas seções ficam visíveis, uma abaixo da outra, College primeiro) -->
+      <nav class="abas-nav" aria-label="Navegação entre os serviços da CSA">
+        <a class="aba-btn aba-ativa" id="tab-college" href="#panel-college" aria-current="true">College Placement</a>
+        <a class="aba-btn" id="tab-highschool" href="#panel-highschool">High School Placement</a>
+      </nav>
 
-      <!-- ===================== ABA: COLLEGE PLACEMENT ===================== -->
-      <section class="conteudo-principal" id="panel-college" role="tabpanel" aria-labelledby="tab-college">
+      <!-- ===================== SEÇÃO: COLLEGE PLACEMENT (principal) ===================== -->
+      <section class="conteudo-principal" id="panel-college" role="region" aria-labelledby="titulo-college" tabindex="-1">
         <div class="conteudo-principal-escrito">
-          <h1 class="conteudo-principal-titulo">College Sports Authority</h1>
+          <h1 class="conteudo-principal-titulo" id="titulo-college">College Sports Authority</h1>
           <p class="conteudo-principal-paragrafo">A <strong>College Sports Authority</strong> é uma consultoria especializada em assessorar estudantes-atletas para os
               processos seletivos de universidades dos Estados Unidos, e os acompanha durante suas trajetórias universitárias, oferecendo suporte
               e criando oportunidades de desenvolvimento pessoal e profissional.</p>
@@ -108,10 +109,10 @@
         </div>
       </section>
 
-      <!-- ===================== ABA: HIGH SCHOOL PLACEMENT ===================== -->
-      <section class="conteudo-principal hidden" id="panel-highschool" role="tabpanel" aria-labelledby="tab-highschool" hidden>
+      <!-- ===================== SEÇÃO: HIGH SCHOOL PLACEMENT ===================== -->
+      <section class="conteudo-principal" id="panel-highschool" role="region" aria-labelledby="titulo-highschool" tabindex="-1">
         <div class="conteudo-principal-escrito">
-          <h1 class="conteudo-principal-titulo">High School Placement</h1>
+          <h1 class="conteudo-principal-titulo" id="titulo-highschool">High School Placement</h1>
           <p class="conteudo-principal-paragrafo">O <strong>High School Placement</strong> é o primeiro degrau de uma trajetória acadêmica e esportiva nos Estados Unidos.
               A CSA orienta estudantes-atletas de <strong>14 a 17 anos</strong> — de qualquer esporte — na colocação em high schools americanas, unindo
               desenvolvimento escolar e esportivo. É uma etapa que pode, mais adiante e não obrigatoriamente, evoluir para o College Placement.</p>

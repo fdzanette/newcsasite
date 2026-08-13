@@ -2,7 +2,7 @@
 
 Site institucional da **College Sports Authority (CSA)**: HTML + CSS + JavaScript puro, com Bootstrap 4 e Font Awesome 6 via CDN. **Sem framework e sem build step.** Um servidor Express mínimo entrega os arquivos estáticos para permitir o deploy no Heroku.
 
-O site tem duas abas (produtos):
+O site apresenta dois produtos, um abaixo do outro na mesma página, com uma barra de navegação no topo que leva a cada seção (College aparece primeiro, por ser o produto principal):
 
 - **College Placement** — conteúdo histórico da CSA (colocação em universidades dos EUA).
 - **High School Placement** — colocação de estudantes-atletas de 14 a 17 anos em high schools americanas.
@@ -15,7 +15,7 @@ O site tem duas abas (produtos):
 |---|---|
 | `index.html` | Página única com as duas abas (College / High School) e o FAQ. |
 | `style.css` | Estilos. As variáveis de cor, fonte e espaçamento ficam no bloco `:root` no topo. |
-| `script.js` | Troca de abas (com hash na URL e acessibilidade) e accordion do FAQ. |
+| `script.js` | Destaque do link da seção em foco (scrollspy) e accordion do FAQ. As duas seções ficam sempre visíveis, uma abaixo da outra. |
 | `server.js` | Servidor Express que serve os arquivos estáticos (usado no Heroku). |
 | `package.json` | Dependência (`express`) e script `start`. |
 | `Procfile` | Comando de processo web do Heroku (`web: node server.js`). |
