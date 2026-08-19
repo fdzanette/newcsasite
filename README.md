@@ -5,7 +5,7 @@ Site institucional da **College Sports Authority (CSA)**: HTML + CSS + JavaScrip
 O site apresenta dois produtos, um abaixo do outro na mesma página, com uma barra de navegação no topo que leva a cada seção (College aparece primeiro, por ser o produto principal):
 
 - **College Placement** — conteúdo histórico da CSA (colocação em universidades dos EUA).
-- **High School Placement** — colocação de estudantes-atletas de 14 a 17 anos em high schools americanas.
+- **Boarding School Placement** — colocação de estudantes-atletas de 14 a 17 anos em boarding schools americanas.
 
 ---
 
@@ -13,7 +13,7 @@ O site apresenta dois produtos, um abaixo do outro na mesma página, com uma bar
 
 | Arquivo | Função |
 |---|---|
-| `index.html` | Página única com as duas abas (College / High School) e o FAQ. |
+| `index.html` | Página única com as duas abas (College / Boarding School) e o FAQ. |
 | `style.css` | Estilos. As variáveis de cor, fonte e espaçamento ficam no bloco `:root` no topo. |
 | `script.js` | Destaque do link da seção em foco (scrollspy), accordion do FAQ e animações de entrada ao rolar. As duas seções ficam sempre visíveis, uma abaixo da outra. |
 | `i18n.js` | Tradução PT/EN: abre em inglês automaticamente fora do Brasil (detecção por fuso horário) e traz o seletor manual PT \| EN. |
@@ -43,7 +43,7 @@ Depois abra **http://localhost:3000**.
 ## Onde editar os textos
 
 - **Conteúdo do College Placement:** dentro de `index.html`, na seção `<section ... id="panel-college">`.
-- **Conteúdo do High School Placement:** dentro de `index.html`, na seção `<section ... id="panel-highschool">` (blocos, "Tipos de escola" e "Perguntas frequentes").
+- **Conteúdo do Boarding School Placement:** dentro de `index.html`, na seção `<section ... id="panel-highschool">` (blocos, "Tipos de escola" e "Perguntas frequentes").
 - **Cores, fontes e espaçamento:** bloco `:root` no topo de `style.css` (ex.: `--color-primary`, `--font-heading`, `--font-body`, `--section-spacing`).
 - **WhatsApp:** o número aparece em links `https://wa.me/5511976562289` no cabeçalho e nos botões de CTA. Ao trocar o número, atualize todos os `wa.me/...` e o texto exibido.
 
@@ -63,9 +63,9 @@ O site é escrito em **português** (versão de origem, no `index.html`). O ingl
 
 ## Placeholders pendentes de conteúdo real
 
-Antes de publicar a aba de High School, procure por `<!-- PLACEHOLDER` em `index.html` e substitua por dados verificados:
+Antes de publicar a aba de Boarding School, procure por `<!-- PLACEHOLDER` em `index.html` e substitua por dados verificados:
 
-- `<!-- PLACEHOLDER: substituir por número real de alunos atendidos em high school -->`
+- `<!-- PLACEHOLDER: substituir por número real de alunos atendidos em boarding school -->`
 - `<!-- PLACEHOLDER: substituir por depoimento real (nome, esporte e escola) -->`
 
 > Importante: não publicar números de alunos, universidades ou depoimentos que não sejam reais e verificados. Nenhum texto promete vaga ou bolsa garantida — qualquer menção a auxílio deixa claro que depende de desempenho esportivo, desempenho acadêmico e orçamento da família.

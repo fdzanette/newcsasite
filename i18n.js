@@ -44,29 +44,27 @@
     'vant-5': 'A once-in-a-lifetime experience in one of the world’s most open and developed countries.',
     'vant-6': 'True fluency in English, today’s most important global language.',
 
-    /* --- High School Placement --- */
-    'hs-intro': '<strong>High School Placement</strong> is the first step of an academic and athletic journey in the United States. CSA places student-athletes aged <strong>14 to 17</strong> in American high schools, where academics and sport grow side by side. It’s a stage that can later lead into College Placement, though it doesn’t have&nbsp;to.',
-    'hs-caminho-h': 'Your path to high school in the U.S. <i class="fa-solid fa-school-flag"></i>',
-    'hs-caminho-p': 'An American high school is where it all starts. For students aged 14 to 17, it’s a chance to grow in the classroom, develop in their sport, and experience American culture early on — building a strong profile from day one that can open the door to future university opportunities.',
+    /* --- Boarding School Placement --- */
+    'hs-intro': '<strong>Boarding School Placement</strong> is the first step of an academic and athletic journey in the United States. CSA places student-athletes aged <strong>14 to 17</strong> in American boarding schools, where academics and sport grow side by side. It’s a stage that can later lead into College Placement, though it doesn’t have&nbsp;to.',
+    'hs-caminho-h': 'Your path to boarding school in the U.S. <i class="fa-solid fa-school-flag"></i>',
+    'hs-caminho-p': 'An American boarding school is where it all starts. For students aged 14 to 17, it’s a chance to grow in the classroom, develop in their sport, and experience American culture early on — building a strong profile from day one that can open the door to future university opportunities.',
     'hs-avaliacao-h': 'Assessment <i class="fa-solid fa-clipboard-check"></i>',
     'hs-avaliacao-p': '<u>An academic, athletic, and family assessment</u> to understand where the student stands, what they’re aiming for, and their family circumstances — before we recommend anything.',
     'hs-matching-h': 'School Matching <i class="fa-solid fa-people-arrows"></i>',
     'hs-matching-p': '<u>Finding the schools that fit best</u> — not the most famous name, but the right match for the student’s academic, athletic, and personal goals.',
-    'hs-tipos-h': 'Types of school:',
-    'escola-public-p': 'Public schools that host exchange students. Individual sports — tennis, swimming, golf — often do well at a day school close to a specialized club or academy.',
-    'escola-private-p': 'Private schools, many run as day schools. A strong fit for individual sports that rely on training at a top club or academy nearby.',
-    'escola-boarding-p': 'Boarding schools that bring study, housing, and sport together on one campus. Team sports — volleyball, basketball — tend to thrive in this all-in-one environment.',
+    'hs-tipos-h': 'The American boarding school',
+    'escola-boarding-p': 'American boarding schools bring study, housing, and sport together on one campus. This is the model CSA works with — an integrated routine where academic and athletic development advance side by side, with close guidance along the way.',
     'hs-faq-h': 'Frequently asked questions <i class="fa-solid fa-circle-question"></i>',
     'faq-q1': 'At what age can I apply?',
-    'faq-a1': 'CSA’s High School Placement is for student-athletes aged <strong>14 to 17</strong>. The best time to start depends on the student’s current school year in Brazil and their academic and athletic goals — something we work out together during the Assessment stage.',
+    'faq-a1': 'CSA’s Boarding School Placement is for student-athletes aged <strong>14 to 17</strong>. The best time to start depends on the student’s current school year in Brazil and their academic and athletic goals — something we work out together during the Assessment stage.',
     'faq-q2': 'Do I need an English test?',
     'faq-a2': 'Usually, yes. Many schools ask for a proficiency test such as the <strong>Duolingo English Test</strong> or <strong>TOEFL Junior</strong>. For students still developing the language, schools often provide <strong>ESL</strong> (English as a Second Language) support during the transition. Requirements vary from school to school.',
-    'faq-q3': 'Are there scholarships in high school?',
+    'faq-q3': 'Are there scholarships in boarding school?',
     'faq-a3': 'Some schools offer support such as <strong>financial aid</strong>, <strong>merit aid</strong>, or <strong>athletic aid</strong>, always according to each school’s policy. Whether any aid is available — and how much — depends on academic performance, athletic performance, and the family’s budget. Nothing is guaranteed.',
     'faq-q4': 'Does CSA guarantee a spot or a scholarship?',
     'faq-a4': '<strong>No.</strong> CSA never promises a guaranteed spot or scholarship. What we do is guide the family, assess the student’s profile, and connect them with the schools that fit best — giving them the strongest possible chance. The outcome depends on <strong>athletic performance</strong>, <strong>academic performance</strong>, and the <strong>family’s budget</strong>, along with each school’s policy.',
-    'faq-q5': 'After high school, can I go on to a college scholarship?',
-    'faq-a5': 'Yes. An American high school is the natural runway to what comes next. Students who want to continue to a U.S. university can move on with the <strong>College Placement</strong> that CSA already offers, building on everything they’ve gained academically and athletically in high school.'
+    'faq-q5': 'After boarding school, can I go on to a college scholarship?',
+    'faq-a5': 'Yes. An American boarding school is the natural runway to what comes next. Students who want to continue to a U.S. university can move on with the <strong>College Placement</strong> that CSA already offers, building on everything they’ve gained academically and athletically in boarding school.'
   };
 
   /* Fusos horários do Brasil — se o visitante NÃO estiver em um deles,
