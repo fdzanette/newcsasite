@@ -53,7 +53,7 @@
     'hs-matching-h': 'School Matching <i class="fa-solid fa-people-arrows"></i>',
     'hs-matching-p': '<u>Finding the schools that fit best</u> — not the most famous name, but the right match for the student’s academic, athletic, and personal goals.',
     'hs-tipos-h': 'The American boarding school',
-    'escola-boarding-p': 'American boarding schools bring study, housing, and sport together on one campus. This is the model CSA works with — an integrated routine where academic and athletic development advance side by side, with close guidance along the way.',
+    'escola-boarding-p': 'Boarding schools in the United States are far more than places to study — they are true ecosystems where the student-athlete lives, studies, and trains on one campus throughout the entire school year. Alongside full academic and extracurricular programs, many of these schools offer highly competitive, top-tier athletic facilities that become a central part of the student experience.<br><br>A boarding school exchange is the ideal gateway for students already in — or about to enter — secondary school who want a transformative experience abroad: studying in an environment of excellence while competing on a high-level team, with all the athletic infrastructure that only the United States can offer.',
     'hs-faq-h': 'Frequently asked questions <i class="fa-solid fa-circle-question"></i>',
     'faq-q1': 'At what age can I apply?',
     'faq-a1': 'CSA’s Boarding School Placement is for student-athletes aged <strong>14 to 17</strong>. The best time to start depends on the student’s current school year in Brazil and their academic and athletic goals — something we work out together during the Assessment stage.',
