@@ -126,12 +126,15 @@ p > strong {
   align-items: center;
   gap: 6px;
   font-size: 1.05rem;
+  text-decoration: none;
   transition: color var(--transition), transform var(--transition);
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   color: #ff6b78;
   transform: translateY(-1px);
+  text-decoration: none;
 }
 
 .social-link--whatsapp {
@@ -788,8 +791,10 @@ p > strong {
   color: #fff;
   font-weight: 800;
   letter-spacing: -0.02em;
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(2.1rem, 4.2vw, 3.4rem);
   margin: 6px 0 18px;
+  overflow-wrap: break-word;
+  hyphens: none;
 }
 .hero-titulo-accent { color: var(--color-accent); }
 
@@ -921,7 +926,22 @@ p > strong {
   margin: 0 auto;
   text-align: center;
 }
-.ss-head { max-width: 760px; margin: 0 auto 30px; }
+.ss-head { max-width: 760px; margin: 0 auto 22px; }
+.ss-texto {
+  max-width: 840px;
+  margin: 0 auto;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.ss-texto p {
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 1.05rem;
+  margin-bottom: 14px;
+}
+.ss-texto p:last-child { margin-bottom: 0; }
+.ss-texto strong { color: #fff; }
 .ss-titulo {
   font-size: clamp(1.7rem, 3vw, 2.3rem);
   font-weight: 800;

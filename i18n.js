@@ -49,10 +49,11 @@
     'onde-h': 'Where to study<span class="onde-q">?</span>',
     'onde-p': 'We work with a broad network of universities across the entire United States — coast to coast. We help each athlete find the right program for their athletic and academic profile.',
 
-    /* --- Student Success --- */
+    /* --- Student Success (padrão de serviço CSA) --- */
     'ss-h': 'A standard of excellence',
-    'ss-p': 'U.S. universities are among the best in the world. Take, for example, the record of prestigious scholarships at <strong>West Virginia University</strong>:',
-    'ss-fonte': 'Source: West Virginia University — prestigious academic scholarships.',
+    'ss-p1': 'We find and place our student-athletes at the best U.S. universities, according to each one’s academic-athletic profile and personal priorities.',
+    'ss-p2': 'Finding the right university is a fully individualized process. We take care of every detail along the academic and athletic preparation journey, building the strongest possible student-athlete profile to present to U.S. university coaches.',
+    'ss-p3': 'Placement demands deep expertise and a wide network of relationships: contact is always made directly with the members of each team’s coaching staff. At <strong>College Sports Authority</strong>, we stand by the student-athlete from the very first conversation to enrollment day — and throughout their entire college journey.',
 
     /* --- Parceiros --- */
     'eyebrow-parceiros': 'CSA Network',
