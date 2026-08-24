@@ -885,6 +885,10 @@ p > strong {
 .onde-paragrafo {
   color: var(--color-muted);
   font-size: 1.05rem;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 .mapa-frame {
   max-width: 980px;
