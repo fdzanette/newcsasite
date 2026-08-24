@@ -44,6 +44,20 @@
     'vant-5': 'A once-in-a-lifetime experience in one of the world’s most open and developed countries.',
     'vant-6': 'True fluency in English, today’s most important global language.',
 
+    /* --- Onde estudar? --- */
+    'eyebrow-onde': 'U.S. Universities',
+    'onde-h': 'Where to study<span class="onde-q">?</span>',
+    'onde-p': 'We work with a broad network of universities across the entire United States — coast to coast. We help each athlete find the right program for their athletic and academic profile.',
+
+    /* --- Student Success --- */
+    'ss-h': 'A standard of excellence',
+    'ss-p': 'U.S. universities are among the best in the world. Take, for example, the record of prestigious scholarships at <strong>West Virginia University</strong>:',
+    'ss-fonte': 'Source: West Virginia University — prestigious academic scholarships.',
+
+    /* --- Parceiros --- */
+    'eyebrow-parceiros': 'CSA Network',
+    'parceiros-h': 'Our partners',
+
   };
 
   /* Fusos horários do Brasil — se o visitante NÃO estiver em um deles,

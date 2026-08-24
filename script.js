@@ -21,7 +21,13 @@
     '.conteudo-terciario-titulo',
     '.conteudo-quarto-titulo',
     '.lista-vantagens .tick-mark',
-    '.secao-parceiros'
+    '.secao-parceiros',
+    '.onde-head',
+    '.mapa-frame',
+    '.ss-head',
+    '.stat-card',
+    '.parceiros-head',
+    '.logo-card'
   ];
 
   var alvos = document.querySelectorAll(seletoresReveal.join(','));
