@@ -20,7 +20,7 @@
   --font-body: 'Inter', 'Segoe UI', Arial, sans-serif;
 
   --content-max: 1080px;
-  --section-spacing: 3rem;       /* respiro padrão entre seções */
+  --section-spacing: 2.5rem;     /* respiro padrão entre seções */
   --radius: 14px;
   --radius-lg: 20px;
   --transition: 0.2s ease;
@@ -658,7 +658,7 @@ p > strong {
   text-align: center;
   font-weight: 600;
   padding: 26px 16px;
-  margin-top: var(--section-spacing);
+  margin-top: 0;
   background: var(--color-header);
 }
 
@@ -741,7 +741,7 @@ p > strong {
   color: #fff;
   background: linear-gradient(135deg, var(--color-header) 0%, var(--color-navy-2) 100%);
   overflow: hidden;
-  padding: calc(65px + 3.5rem) 0 5rem;
+  padding: calc(65px + 3rem) 0 3.5rem;
   scroll-margin-top: 80px;
 }
 .hero:focus { outline: none; }
@@ -855,9 +855,13 @@ p > strong {
 /* ============================================================
    ONDE ESTUDAR? (reintroduzido do design antigo, modernizado)
    ============================================================ */
+/* Bloco anterior (vantagens) encosta na faixa "Onde estudar?":
+   zera a margem para não somar com o padding da faixa. */
+.conteudo-quarto { margin-bottom: 0.5rem; }
+
 .onde-estudar {
   width: 100%;
-  margin: var(--section-spacing) auto;
+  margin: 0 auto;
   padding: var(--section-spacing) 16px;
   background:
     radial-gradient(1200px 300px at 50% 0, rgba(9,21,49,.05), transparent 70%),
@@ -901,8 +905,8 @@ p > strong {
 .student-success {
   position: relative;
   width: 100%;
-  margin-top: var(--section-spacing);
-  padding: calc(var(--section-spacing) + 1rem) 16px;
+  margin-top: 0;
+  padding: var(--section-spacing) 16px;
   background: linear-gradient(135deg, var(--color-header) 0%, var(--color-navy-2) 100%);
   color: #fff;
   overflow: hidden;
@@ -1032,12 +1036,6 @@ p > strong {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.82;
-  transition: filter .25s ease, opacity .25s ease;
-}
-.logo-card:hover img {
-  filter: grayscale(0);
   opacity: 1;
 }
 

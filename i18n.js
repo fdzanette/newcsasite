@@ -24,7 +24,7 @@
     'cta-whatsapp': '<i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp',
 
     /* --- College Placement --- */
-    'col-intro': '<strong>College Sports Authority</strong> is a consultancy dedicated to guiding student-athletes through the U.S. university admissions process. We support each student from the very first application to graduation day, opening doors to personal and professional growth.',
+    'col-intro': '<strong>College Sports Authority</strong> is a consultancy dedicated to guiding student-athletes through the U.S. university admissions process. We support each student from the very first application to graduation day, opening doors to personal and professional growth. <strong>Over our history, we have guided more than 1,300 student-athletes through this journey.</strong>',
     'col-caminho-h': 'Your path to college <i class="fa-solid fa-arrow-trend-up"></i>',
     'col-caminho-p': 'We help each student strengthen both their skills and their presentation, so they stand out as the strongest candidates for the universities they’re targeting — with the best possible shot at admission. From there, we guide every step of the application: mapping requirements, tracking deadlines, planning document submissions, then reviewing and sending each package. Our support doesn’t end at acceptance — we stay involved throughout all four years of college, offering day-to-day guidance while easing the cultural adjustment.',
     'col-selecao-h': 'Selection <i class="fa-solid fa-magnifying-glass"></i>',
