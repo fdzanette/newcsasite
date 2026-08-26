@@ -677,7 +677,6 @@ p > strong {
 @media (max-width: 1024px) {
   .cards-3,
   .cards-4 { grid-template-columns: repeat(2, 1fr); }
-  .passos-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -710,8 +709,6 @@ p > strong {
   .cards-2,
   .cards-3,
   .cards-4 { grid-template-columns: 1fr; }
-
-  .passos-grid { grid-template-columns: 1fr; }
 
   .lista-vantagens { grid-template-columns: 1fr; }
 
@@ -1265,6 +1262,9 @@ p > strong {
   .eyebrow--light { margin-left: auto; margin-right: auto; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .logos-grid { grid-template-columns: repeat(3, 1fr); }
+  /* Etapas do processo empilham no mobile (evita colunas espremidas) */
+  .passos-grid { grid-template-columns: 1fr; gap: 16px; }
+  .passo-num { font-size: 2.2rem; }
 }
 
 @media (max-width: 560px) {
