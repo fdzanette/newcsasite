@@ -1052,8 +1052,10 @@ p > strong {
 .boarding-intro {
   max-width: 720px;
   margin: 0 auto;
-  text-align: center !important; /* abertura centralizada, não justificada */
-  hyphens: none !important;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 /* Chips de destaque (idade, nível, campus) */
