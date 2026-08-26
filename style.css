@@ -5,13 +5,13 @@
   /* Vermelho vinho — herança do logo, porém mais sóbrio. Uso moderado. */
   --color-primary: #7b1220;
   --color-primary-dark: #5c0d18;
-  --color-ink: #1b1b1f;          /* texto principal */
-  --color-muted: #55555f;        /* texto secundário */
-  --color-bg: #ffffff;           /* fundo da página (branco) */
-  --color-soft: #f6f7fb;         /* faixas/realces suaves */
+  --color-ink: #eef1f8;          /* texto principal (claro p/ fundo navy) */
+  --color-muted: #b2bcd6;        /* texto secundário (claro) */
+  --color-bg: #091531;           /* fundo da página no tom do banner (navy) */
+  --color-soft: #0d1e46;         /* faixas/realces (navy mais claro) */
   --color-header: #091531;       /* azul-marinho do cabeçalho (mantido) */
-  --color-surface: #ffffff;      /* cartões/superfícies */
-  --color-border: #e6e8f0;
+  --color-surface: #13264f;      /* cartões/superfícies (navy elevado) */
+  --color-border: rgba(255,255,255,.14);
   --color-accent: #e42535;       /* vermelho vivo p/ destaques sobre fundo escuro */
   --color-accent-yellow: #f4e12b;/* amarelo (herança do design antigo), uso mínimo */
   --color-navy-2: #0d1e46;       /* segundo tom de azul-marinho p/ gradientes */
@@ -44,7 +44,11 @@ html {
 
 body {
   font-size: 100%;
-  background: var(--color-bg);
+  /* Fundo no tom do banner principal (gradiente navy), fixo em toda a página */
+  background-color: var(--color-header);
+  background-image: linear-gradient(160deg, var(--color-header) 0%, var(--color-navy-2) 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   width: 100%;
   font-family: var(--font-body);
   color: var(--color-ink);
@@ -746,20 +750,6 @@ p > strong {
 }
 .hero:focus { outline: none; }
 
-/* Triângulo decorativo (marca CSA) ao fundo, sutil */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: -60px;
-  right: -40px;
-  width: 320px;
-  height: 320px;
-  background: var(--color-accent);
-  opacity: 0.10;
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
-  transform: rotate(12deg);
-  pointer-events: none;
-}
 /* Faixa diagonal vermelha na base (transição para o conteúdo branco) */
 .hero::after {
   content: "";
@@ -918,18 +908,6 @@ p > strong {
   color: #fff;
   overflow: hidden;
 }
-.student-success::before {
-  content: "";
-  position: absolute;
-  left: -50px;
-  bottom: -60px;
-  width: 260px;
-  height: 260px;
-  background: var(--color-accent);
-  opacity: 0.10;
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
-  pointer-events: none;
-}
 .ss-inner {
   position: relative;
   z-index: 1;
@@ -1060,6 +1038,186 @@ p > strong {
 .rodape-social .social-link { font-size: 1.2rem; }
 
 /* ============================================================
+   BOARDING SCHOOL PLACEMENT (2ª trilha) — componentes M7
+   ============================================================ */
+/* Abertura da trilha: fatos-chave em evidência (padrão M7) */
+.boarding-abertura {
+  width: 88%;
+  max-width: 860px;
+  margin: 0 auto var(--section-spacing);
+  padding: 10px;
+  text-align: center;
+}
+.boarding-abertura .conteudo-principal-titulo { padding-bottom: 10px; }
+.boarding-intro {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/* Chips de destaque (idade, nível, campus) */
+.boarding-chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 22px 0 4px;
+  padding: 0;
+}
+.boarding-chips li {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-header);
+  background: var(--color-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 9px 16px;
+  line-height: 1.2;
+}
+.boarding-chips li i { color: var(--color-primary); }
+
+/* Botões próprios da trilha (contorno vinho / claro sobre faixa escura) */
+.btn-outline-boarding {
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 999px;
+  padding: 11px 24px;
+  background: transparent;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+.btn-outline-boarding:hover,
+.btn-outline-boarding:focus {
+  background: rgba(123, 18, 32, 0.08);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+.btn-light-boarding {
+  background: #fff;
+  color: var(--color-primary);
+  border: 2px solid #fff;
+  border-radius: 999px;
+  padding: 11px 26px;
+  font-weight: 700;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+.btn-light-boarding:hover,
+.btn-light-boarding:focus {
+  background: #fff;
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0,0,0,.18);
+}
+
+/* Etapas do processo (01 / 02 / 03) — padrão M7 */
+.passos-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin: 26px 0 0;
+  padding: 0;
+  counter-reset: passo;
+}
+.passo-card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 30px 24px 26px;
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.passo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(123, 18, 32, 0.35);
+}
+.passo-num {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: rgba(123, 18, 32, 0.12);
+  letter-spacing: -0.03em;
+}
+.passo-card h3 {
+  font-size: 1.25rem;
+  color: var(--color-ink);
+  margin-bottom: 10px;
+  padding-right: 46px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.passo-card h3 i { color: var(--color-primary); }
+.passo-card p {
+  color: var(--color-muted);
+  font-size: 0.98rem;
+  text-align: left;
+}
+
+/* Destaques da experiência (mini-cards de ícone) */
+.destaques-grid { margin-top: 22px; }
+.destaque-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px 18px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.destaque-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(123, 18, 32, 0.35);
+}
+.destaque-card .fator-icone { margin-left: auto; margin-right: auto; }
+.destaque-card p {
+  font-weight: 600;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+/* Faixa de chamada final (CTA band) — encerra a trilha em azul-marinho */
+.boarding-cta-band {
+  position: relative;
+  width: 92%;
+  max-width: var(--content-max);
+  margin: var(--section-spacing) auto 0;
+  padding: 40px 28px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--color-header) 0%, var(--color-navy-2) 100%);
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.boarding-cta-band h2 {
+  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.boarding-cta-band p {
+  color: rgba(255,255,255,0.86);
+  max-width: 620px;
+  margin: 0 auto 22px;
+}
+.boarding-cta-band .cta-grupo { margin-top: 0; }
+
+/* ============================================================
    RESPONSIVO — novos componentes
    ============================================================ */
 @media (max-width: 900px) {
@@ -1071,6 +1229,9 @@ p > strong {
   .eyebrow--light { margin-left: auto; margin-right: auto; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .logos-grid { grid-template-columns: repeat(3, 1fr); }
+  /* Etapas do processo empilham no mobile (evita colunas espremidas) */
+  .passos-grid { grid-template-columns: 1fr; gap: 16px; }
+  .passo-num { font-size: 2.2rem; }
 }
 
 @media (max-width: 560px) {
@@ -1079,3 +1240,75 @@ p > strong {
   .logos-grid { grid-template-columns: repeat(2, 1fr); }
   .logo-card { height: 100px; }
 }
+
+/* ============================================================
+   TEMA ESCURO — fundo no tom do banner principal (navy)
+   Ajustes de legibilidade sobre o novo fundo escuro. As variáveis
+   (--color-ink/muted/bg/soft/surface/border) já foram invertidas
+   acima; aqui corrigimos apenas os pontos com cor fixa (títulos
+   navy, vinho de baixo contraste, superfícies brancas).
+   ============================================================ */
+/* Títulos que eram navy/vinho passam a claros sobre o fundo escuro */
+.conteudo-principal-titulo,
+.onde-titulo,
+.parceiros-titulo { color: #fff; }
+
+/* Eyebrows: texto rosado claro sobre pílula translúcida */
+.eyebrow {
+  color: #ff9aa4;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* Barra de abas: navy translúcido com botões claros */
+.abas-nav {
+  background: rgba(9, 21, 49, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.aba-btn,
+.aba-btn:link,
+.aba-btn:visited {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+.aba-btn:hover,
+.aba-btn:focus {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+.aba-btn.aba-ativa,
+.aba-btn.aba-ativa:hover,
+.aba-btn.aba-ativa:focus {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* Chips de destaque da trilha Boarding: texto claro */
+.boarding-chips li {
+  color: var(--color-ink);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.boarding-chips li i { color: #ff9aa4; }
+
+/* Botão de contorno da trilha: contorno rosado claro */
+.btn-outline-boarding {
+  color: #ffd9dd;
+  border-color: #ff9aa4;
+}
+.btn-outline-boarding:hover,
+.btn-outline-boarding:focus {
+  background: rgba(255, 255, 255, 0.10);
+  color: #fff;
+}
+
+/* Moldura do mapa "Onde estudar?": superfície escura em vez de branca */
+.mapa-frame { background: var(--color-surface); }
+
+/* Acentos que ficavam apagados no cartão escuro */
+.passo-num { color: rgba(228, 37, 53, 0.30); }
+.lista-vantagens .tick-mark::before,
+.faq-icone { color: #ff9aa4; }
+
+/* Cartões dos parceiros permanecem CLAROS (logos são feitos p/ fundo claro) */
+.logo-card { background: #fff; }

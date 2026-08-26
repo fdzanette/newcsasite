@@ -15,7 +15,7 @@
     <meta name="description" content="A College Sports Authority é uma consultoria especializada em assessorar estudantes-atletas para os
             processos seletivos de universidades dos Estados Unidos, e os acompanha durante suas trajetórias universitárias, oferecendo suporte
             e criando oportunidades de desenvolvimento pessoal e profissional.">
-    <meta name="keywords" content="Bolsas, estudo, esportes, universidades, americanas, faculdade, college, high school">
+    <meta name="keywords" content="Bolsas, estudo, esportes, universidades, americanas, faculdade, college, boarding school, intercâmbio, ensino médio">
     <title>College Sports Authority | Bolsas Esportivas nos Estados Unidos</title>
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -26,7 +26,7 @@
     <!-- Duas famílias: Poppins (títulos) + Inter (corpo/UI) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     <!-- style.css por último para vencer os padrões do Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="style.css?v=2">
+    <link rel="stylesheet" type="text/css" href="style.css?v=8">
 
   </head>
   <body>
@@ -49,6 +49,16 @@
     </header>
 
     <main class="conteudo">
+
+      <!-- Navegação entre os dois serviços da CSA. As duas trilhas ficam
+           visíveis na mesma página (College primeiro); os botões rolam até
+           a seção correspondente e destacam a trilha em foco (scrollspy).
+           OCULTA na main: a trilha Boarding ainda não foi lançada. Para
+           ligar, remova a classe "hidden" daqui e da seção #panel-highschool. -->
+      <nav class="abas-nav hidden" aria-label="Serviços da CSA">
+        <a class="aba-btn aba-ativa" id="tab-college" href="#panel-college" aria-current="true" data-i18n="tab-college">College Placement</a>
+        <a class="aba-btn" id="tab-highschool" href="#panel-highschool" data-i18n="tab-highschool">Boarding School Placement</a>
+      </nav>
 
       <!-- ===================== HERO (bloco de abertura energético) ===================== -->
       <section class="hero" id="panel-college" role="region" aria-labelledby="titulo-college" tabindex="-1">
@@ -156,6 +166,158 @@
         </div>
       </section>
 
+      <!-- ===================== BOARDING SCHOOL PLACEMENT (2ª trilha CSA) =====================
+           OCULTA na main (produto ainda não lançado). Para exibir, remova a
+           classe "hidden" desta seção e da <nav class="abas-nav"> acima. -->
+      <section class="conteudo-principal panel-boarding hidden" id="panel-highschool" role="region" aria-labelledby="titulo-highschool" tabindex="-1">
+
+        <!-- Abertura: eyebrow + título + intro + chips de destaque + CTA (padrão M7: fatos-chave em evidência) -->
+        <div class="boarding-abertura">
+          <span class="eyebrow" data-i18n="eyebrow-boarding">Nova trilha CSA</span>
+          <h2 class="conteudo-principal-titulo" id="titulo-highschool" data-i18n="hs-titulo">Boarding School Placement</h2>
+          <p class="conteudo-principal-paragrafo boarding-intro" data-i18n="hs-intro">O <strong>Boarding School Placement</strong> é o primeiro degrau de uma trajetória acadêmica e esportiva nos Estados Unidos. A CSA orienta estudantes-atletas de <strong>14 a 17 anos</strong> na colocação em boarding schools americanas, unindo desenvolvimento escolar e esportivo. É uma etapa que pode, mais adiante e não obrigatoriamente, evoluir para o College Placement.</p>
+
+          <ul class="boarding-chips" aria-label="Destaques do programa">
+            <li><i class="fa-solid fa-user-graduate"></i> <span data-i18n="chip-idade">14–17 anos</span></li>
+            <li><i class="fa-solid fa-school-flag"></i> <span data-i18n="chip-nivel">Ensino médio nos EUA</span></li>
+            <li><i class="fa-solid fa-house-chimney-window"></i> <span data-i18n="chip-campus">Mora, estuda e treina no campus</span></li>
+          </ul>
+
+          <div class="cta-grupo">
+            <a href="mailto:gustavo@csauthority.com.br?subject=Boarding%20School%20Placement" type="button" class="btn btn-danger"><strong data-i18n="cta-contato">Entre em contato</strong></a>
+            <a href="https://wa.me/5551993183617" target="_blank" rel="noopener" type="button" class="btn btn-outline-boarding"><strong data-i18n="cta-whatsapp"><i class="fa-brands fa-whatsapp"></i> Fale no WhatsApp</strong></a>
+          </div>
+        </div>
+
+        <!-- Caminho para a boarding school -->
+        <div class="conteudo-secundario">
+          <span class="eyebrow" data-i18n="eyebrow-boarding-2">Boarding School Placement</span>
+          <h2 class="conteudo-secundario-titulo" data-i18n="hs-caminho-h">Caminho para a boarding school nos EUA <i class="fa-solid fa-school-flag"></i></h2>
+          <p class="conteudo-secundario-paragrafo" data-i18n="hs-caminho-p">Estudar em uma boarding school americana é o primeiro degrau de uma jornada acadêmica e esportiva nos Estados Unidos. Para estudantes-atletas de 14 a 17 anos, é a oportunidade de amadurecer academicamente, evoluir dentro do próprio esporte e vivenciar a cultura americana ainda no ensino médio — construindo, desde cedo, um perfil sólido que pode abrir caminho para futuras oportunidades universitárias.</p>
+        </div>
+
+        <!-- Como funciona: etapas numeradas (padrão M7: processo em passos) -->
+        <div class="conteudo-terciario">
+          <h2 class="conteudo-terciario-titulo" data-i18n="hs-como-h">Como funciona <i class="fa-solid fa-list-check"></i></h2>
+          <ol class="passos-grid">
+            <li class="passo-card">
+              <span class="passo-num">01</span>
+              <h3 data-i18n="hs-avaliacao-h">Avaliação <i class="fa-solid fa-clipboard-check"></i></h3>
+              <p data-i18n="hs-avaliacao-p"><u>acadêmica, esportiva e familiar</u> do estudante, para entender o momento do aluno, seus objetivos e o contexto da família antes de qualquer indicação.</p>
+            </li>
+            <li class="passo-card">
+              <span class="passo-num">02</span>
+              <h3 data-i18n="hs-matching-h">School Matching <i class="fa-solid fa-people-arrows"></i></h3>
+              <p data-i18n="hs-matching-p"><u>identificação das escolas mais compatíveis</u> com o perfil do aluno — não a "mais famosa", e sim a mais adequada aos seus objetivos acadêmicos, esportivos e pessoais.</p>
+            </li>
+            <!-- Passo 03 espelha o padrão de serviço que a CSA já descreve no College Placement
+                 (suporte à aplicação + acompanhamento). Texto sujeito à validação do cliente. -->
+            <li class="passo-card">
+              <span class="passo-num">03</span>
+              <h3 data-i18n="hs-aplicacao-h">Aplicação &amp; acompanhamento <i class="fa-solid fa-plane-departure"></i></h3>
+              <p data-i18n="hs-aplicacao-p"><u>suporte na candidatura</u> (documentos, provas de inglês e prazos) e acompanhamento do estudante-atleta na adaptação à escola e à vida nos Estados Unidos.</p>
+            </li>
+          </ol>
+        </div>
+
+        <!-- A boarding school americana (descrição do ecossistema) -->
+        <div class="conteudo-terciario">
+          <h2 class="conteudo-terciario-titulo" data-i18n="hs-tipos-h">A boarding school americana</h2>
+          <div class="escola-card">
+            <span class="escola-icone"><i class="fa-solid fa-house-chimney-window"></i></span>
+            <p data-i18n="escola-boarding-p">As boarding schools nos Estados Unidos são muito mais do que instituições de ensino: são verdadeiros ecossistemas onde o estudante-atleta mora, estuda e treina dentro do mesmo campus durante todo o ano letivo. Além de programas acadêmicos e extracurriculares completos, muitas dessas escolas contam com estruturas esportivas competitivas de altíssimo nível, que se tornam parte central da experiência estudantil.<br><br>O intercâmbio de boarding school é a porta de entrada ideal para estudantes que já cursam ou estão prestes a cursar o ensino médio e querem viver uma experiência internacional transformadora — estudando em um ambiente de excelência e, ao mesmo tempo, competindo em um time de alto nível, com toda a estrutura esportiva que só os Estados Unidos podem oferecer.</p>
+          </div>
+
+          <!-- Destaques da experiência (restatements fiéis do parágrafo acima) -->
+          <div class="cards-grid cards-4 destaques-grid">
+            <div class="destaque-card">
+              <span class="fator-icone"><i class="fa-solid fa-house-chimney-window"></i></span>
+              <p data-i18n="dest-campus">Mora, estuda e treina no mesmo campus</p>
+            </div>
+            <div class="destaque-card">
+              <span class="fator-icone"><i class="fa-solid fa-trophy"></i></span>
+              <p data-i18n="dest-esporte">Estrutura esportiva de altíssimo nível</p>
+            </div>
+            <div class="destaque-card">
+              <span class="fator-icone"><i class="fa-solid fa-book-open-reader"></i></span>
+              <p data-i18n="dest-academico">Programa acadêmico completo</p>
+            </div>
+            <div class="destaque-card">
+              <span class="fator-icone"><i class="fa-solid fa-earth-americas"></i></span>
+              <p data-i18n="dest-cultura">Imersão cultural desde cedo</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLACEHOLDER: substituir por número real de alunos atendidos em boarding school (contador) -->
+        <!-- PLACEHOLDER: substituir por depoimento real (nome, esporte e escola) de aluno de boarding school -->
+
+        <!-- FAQ -->
+        <div class="conteudo-quarto faq-bloco">
+          <h2 class="conteudo-quarto-titulo" data-i18n="hs-faq-h">Perguntas frequentes <i class="fa-solid fa-circle-question"></i></h2>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" type="button" aria-expanded="false">
+              <span data-i18n="faq-q1">A partir de qual idade posso aplicar?</span>
+              <i class="fa-solid fa-chevron-down faq-icone"></i>
+            </button>
+            <div class="faq-resposta" hidden>
+              <p data-i18n="faq-a1">O Boarding School Placement da CSA atende estudantes-atletas de <strong>14 a 17 anos</strong>. A idade ideal de entrada depende do ano escolar do aluno no Brasil e dos seus objetivos acadêmicos e esportivos, algo que definimos juntos na etapa de Avaliação.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" type="button" aria-expanded="false">
+              <span data-i18n="faq-q2">Preciso de prova de inglês?</span>
+              <i class="fa-solid fa-chevron-down faq-icone"></i>
+            </button>
+            <div class="faq-resposta" hidden>
+              <p data-i18n="faq-a2">Em geral, sim. Muitas escolas pedem uma prova de proficiência como o <strong>Duolingo English Test</strong> ou o <strong>TOEFL Junior</strong>. Para alunos que ainda estão desenvolvendo o idioma, várias escolas oferecem programas de <strong>ESL</strong> (English as a Second Language) como apoio durante a adaptação. Os requisitos variam conforme a política de cada escola.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" type="button" aria-expanded="false">
+              <span data-i18n="faq-q3">Existem bolsas em boarding school?</span>
+              <i class="fa-solid fa-chevron-down faq-icone"></i>
+            </button>
+            <div class="faq-resposta" hidden>
+              <p data-i18n="faq-a3">Algumas escolas oferecem apoio financeiro em formatos como <strong>financial aid</strong>, <strong>merit aid</strong> e <strong>athletic aid</strong>, sempre conforme a política de cada instituição. A existência e o valor de qualquer auxílio dependem do desempenho acadêmico, do desempenho esportivo e do orçamento da família — não são garantidos.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" type="button" aria-expanded="false">
+              <span data-i18n="faq-q4">A CSA garante vaga ou bolsa?</span>
+              <i class="fa-solid fa-chevron-down faq-icone"></i>
+            </button>
+            <div class="faq-resposta" hidden>
+              <p data-i18n="faq-a4"><strong>Não.</strong> A CSA não promete vaga garantida nem bolsa garantida. Nosso trabalho é orientar, avaliar o perfil e conectar o aluno às escolas mais compatíveis, maximizando as chances. O resultado dependerá do <strong>desempenho esportivo</strong>, do <strong>desempenho acadêmico</strong> e do <strong>orçamento da família</strong>, além da política de cada escola.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" type="button" aria-expanded="false">
+              <span data-i18n="faq-q5">Depois da boarding school dá para seguir para uma bolsa de faculdade?</span>
+              <i class="fa-solid fa-chevron-down faq-icone"></i>
+            </button>
+            <div class="faq-resposta" hidden>
+              <p data-i18n="faq-a5">Sim. A boarding school americana é uma preparação natural para o próximo passo. Quem deseja seguir para a universidade nos EUA pode dar continuidade com o <strong>College Placement</strong> já oferecido pela CSA, aproveitando toda a experiência acadêmica e esportiva construída no ensino médio.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faixa de chamada final -->
+        <div class="boarding-cta-band">
+          <h2 data-i18n="hs-cta-h">Pronto para dar o primeiro passo?</h2>
+          <p data-i18n="hs-cta-p">Fale com a CSA e descubra o caminho da boarding school americana para o seu perfil.</p>
+          <div class="cta-grupo">
+            <a href="mailto:gustavo@csauthority.com.br?subject=Boarding%20School%20Placement" type="button" class="btn btn-light-boarding"><strong data-i18n="cta-contato">Entre em contato</strong></a>
+            <a href="https://wa.me/5551993183617" target="_blank" rel="noopener" type="button" class="btn btn-hero-ghost"><strong data-i18n="cta-whatsapp"><i class="fa-brands fa-whatsapp"></i> Fale no WhatsApp</strong></a>
+          </div>
+        </div>
+      </section>
+
       <!-- ===================== NOSSOS PARCEIROS (grade moderna de logos) ===================== -->
       <section class="secao-parceiros" id="parceiros">
         <div class="parceiros-head">
@@ -188,7 +350,7 @@
       </div>
     </footer>
 
-    <script src="i18n.js?v=2" defer></script>
-    <script src="script.js?v=2" defer></script>
+    <script src="i18n.js?v=8" defer></script>
+    <script src="script.js?v=8" defer></script>
   </body>
 </html>
