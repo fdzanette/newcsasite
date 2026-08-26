@@ -59,6 +59,57 @@
     'eyebrow-parceiros': 'CSA Network',
     'parceiros-h': 'Our partners',
 
+    /* --- Abas (trilhas de serviço) --- */
+    'tab-college': 'College Placement',
+    'tab-highschool': 'Boarding School Placement',
+
+    /* --- Boarding School Placement: abertura --- */
+    'eyebrow-boarding': 'New CSA track',
+    'hs-titulo': 'Boarding School Placement',
+    'hs-intro': '<strong>Boarding School Placement</strong> is the first step of an academic and athletic journey in the United States. CSA places student-athletes aged <strong>14 to 17</strong> in American boarding schools, where academics and sport grow side by side. It’s a stage that can later lead into College Placement, though it doesn’t have&nbsp;to.',
+    'chip-idade': 'Ages 14–17',
+    'chip-nivel': 'Secondary school in the U.S.',
+    'chip-campus': 'Live, study & train on campus',
+
+    /* --- Boarding: caminho --- */
+    'eyebrow-boarding-2': 'Boarding School Placement',
+    'hs-caminho-h': 'Your path to boarding school in the U.S. <i class="fa-solid fa-school-flag"></i>',
+    'hs-caminho-p': 'An American boarding school is where it all starts. For students aged 14 to 17, it’s a chance to grow in the classroom, develop in their sport, and experience American culture early on — building a strong profile from day one that can open the door to future university opportunities.',
+
+    /* --- Boarding: como funciona (etapas) --- */
+    'hs-como-h': 'How it works <i class="fa-solid fa-list-check"></i>',
+    'hs-avaliacao-h': 'Assessment <i class="fa-solid fa-clipboard-check"></i>',
+    'hs-avaliacao-p': '<u>An academic, athletic, and family assessment</u> to understand where the student stands, what they’re aiming for, and their family circumstances — before we recommend anything.',
+    'hs-matching-h': 'School Matching <i class="fa-solid fa-people-arrows"></i>',
+    'hs-matching-p': '<u>Finding the schools that fit best</u> — not the most famous name, but the right match for the student’s academic, athletic, and personal goals.',
+    'hs-aplicacao-h': 'Application &amp; support <i class="fa-solid fa-plane-departure"></i>',
+    'hs-aplicacao-p': '<u>Support through the application</u> (documents, English tests, and deadlines) and ongoing guidance as the student-athlete settles into school and life in the United States.',
+
+    /* --- Boarding: a boarding school americana --- */
+    'hs-tipos-h': 'The American boarding school',
+    'escola-boarding-p': 'Boarding schools in the United States are far more than places to study — they are true ecosystems where the student-athlete lives, studies, and trains on one campus throughout the entire school year. Alongside full academic and extracurricular programs, many of these schools offer highly competitive, top-tier athletic facilities that become a central part of the student experience.<br><br>A boarding school exchange is the ideal gateway for students already in — or about to enter — secondary school who want a transformative experience abroad: studying in an environment of excellence while competing on a high-level team, with all the athletic infrastructure that only the United States can offer.',
+    'dest-campus': 'Live, study & train on one campus',
+    'dest-esporte': 'Top-tier athletic facilities',
+    'dest-academico': 'Full academic program',
+    'dest-cultura': 'Cultural immersion from the start',
+
+    /* --- Boarding: FAQ --- */
+    'hs-faq-h': 'Frequently asked questions <i class="fa-solid fa-circle-question"></i>',
+    'faq-q1': 'At what age can I apply?',
+    'faq-a1': 'CSA’s Boarding School Placement is for student-athletes aged <strong>14 to 17</strong>. The best time to start depends on the student’s current school year in Brazil and their academic and athletic goals — something we work out together during the Assessment stage.',
+    'faq-q2': 'Do I need an English test?',
+    'faq-a2': 'Usually, yes. Many schools ask for a proficiency test such as the <strong>Duolingo English Test</strong> or <strong>TOEFL Junior</strong>. For students still developing the language, schools often provide <strong>ESL</strong> (English as a Second Language) support during the transition. Requirements vary from school to school.',
+    'faq-q3': 'Are there scholarships in boarding school?',
+    'faq-a3': 'Some schools offer support such as <strong>financial aid</strong>, <strong>merit aid</strong>, or <strong>athletic aid</strong>, always according to each school’s policy. Whether any aid is available — and how much — depends on academic performance, athletic performance, and the family’s budget. Nothing is guaranteed.',
+    'faq-q4': 'Does CSA guarantee a spot or a scholarship?',
+    'faq-a4': '<strong>No.</strong> CSA never promises a guaranteed spot or scholarship. What we do is guide the family, assess the student’s profile, and connect them with the schools that fit best — giving them the strongest possible chance. The outcome depends on <strong>athletic performance</strong>, <strong>academic performance</strong>, and the <strong>family’s budget</strong>, along with each school’s policy.',
+    'faq-q5': 'After boarding school, can I go on to a college scholarship?',
+    'faq-a5': 'Yes. An American boarding school is the natural runway to what comes next. Students who want to continue to a U.S. university can move on with the <strong>College Placement</strong> that CSA already offers, building on everything they’ve gained academically and athletically in boarding school.',
+
+    /* --- Boarding: chamada final --- */
+    'hs-cta-h': 'Ready to take the first step?',
+    'hs-cta-p': 'Talk to CSA and discover the American boarding school path that fits your profile.',
+
   };
 
   /* Fusos horários do Brasil — se o visitante NÃO estiver em um deles,

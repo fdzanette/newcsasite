@@ -677,6 +677,7 @@ p > strong {
 @media (max-width: 1024px) {
   .cards-3,
   .cards-4 { grid-template-columns: repeat(2, 1fr); }
+  .passos-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -709,6 +710,8 @@ p > strong {
   .cards-2,
   .cards-3,
   .cards-4 { grid-template-columns: 1fr; }
+
+  .passos-grid { grid-template-columns: 1fr; }
 
   .lista-vantagens { grid-template-columns: 1fr; }
 
@@ -1058,6 +1061,197 @@ p > strong {
 .rodape-logo { max-height: 46px; width: auto; }
 .rodape-social { display: flex; gap: 20px; }
 .rodape-social .social-link { font-size: 1.2rem; }
+
+/* ============================================================
+   BOARDING SCHOOL PLACEMENT (2ª trilha) — componentes M7
+   ============================================================ */
+/* Abertura da trilha: fatos-chave em evidência (padrão M7) */
+.boarding-abertura {
+  width: 88%;
+  max-width: 860px;
+  margin: 0 auto var(--section-spacing);
+  padding: 10px;
+  text-align: center;
+}
+.boarding-abertura .conteudo-principal-titulo { padding-bottom: 10px; }
+.boarding-intro {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center !important; /* abertura centralizada, não justificada */
+  hyphens: none !important;
+}
+
+/* Chips de destaque (idade, nível, campus) */
+.boarding-chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 22px 0 4px;
+  padding: 0;
+}
+.boarding-chips li {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-header);
+  background: var(--color-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 9px 16px;
+  line-height: 1.2;
+}
+.boarding-chips li i { color: var(--color-primary); }
+
+/* Botões próprios da trilha (contorno vinho / claro sobre faixa escura) */
+.btn-outline-boarding {
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 999px;
+  padding: 11px 24px;
+  background: transparent;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+.btn-outline-boarding:hover,
+.btn-outline-boarding:focus {
+  background: rgba(123, 18, 32, 0.08);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+.btn-light-boarding {
+  background: #fff;
+  color: var(--color-primary);
+  border: 2px solid #fff;
+  border-radius: 999px;
+  padding: 11px 26px;
+  font-weight: 700;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+.btn-light-boarding:hover,
+.btn-light-boarding:focus {
+  background: #fff;
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0,0,0,.18);
+}
+
+/* Etapas do processo (01 / 02 / 03) — padrão M7 */
+.passos-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin: 26px 0 0;
+  padding: 0;
+  counter-reset: passo;
+}
+.passo-card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 30px 24px 26px;
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.passo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(123, 18, 32, 0.35);
+}
+.passo-num {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: rgba(123, 18, 32, 0.12);
+  letter-spacing: -0.03em;
+}
+.passo-card h3 {
+  font-size: 1.25rem;
+  color: var(--color-ink);
+  margin-bottom: 10px;
+  padding-right: 46px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.passo-card h3 i { color: var(--color-primary); }
+.passo-card p {
+  color: var(--color-muted);
+  font-size: 0.98rem;
+  text-align: left;
+}
+
+/* Destaques da experiência (mini-cards de ícone) */
+.destaques-grid { margin-top: 22px; }
+.destaque-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px 18px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.destaque-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(123, 18, 32, 0.35);
+}
+.destaque-card .fator-icone { margin-left: auto; margin-right: auto; }
+.destaque-card p {
+  font-weight: 600;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+/* Faixa de chamada final (CTA band) — encerra a trilha em azul-marinho */
+.boarding-cta-band {
+  position: relative;
+  width: 92%;
+  max-width: var(--content-max);
+  margin: var(--section-spacing) auto 0;
+  padding: 40px 28px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--color-header) 0%, var(--color-navy-2) 100%);
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.boarding-cta-band::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -30px;
+  width: 220px;
+  height: 220px;
+  background: var(--color-accent);
+  opacity: 0.12;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  transform: rotate(10deg);
+  pointer-events: none;
+}
+.boarding-cta-band h2 {
+  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.boarding-cta-band p {
+  color: rgba(255,255,255,0.86);
+  max-width: 620px;
+  margin: 0 auto 22px;
+}
+.boarding-cta-band .cta-grupo { margin-top: 0; }
 
 /* ============================================================
    RESPONSIVO — novos componentes
