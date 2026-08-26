@@ -750,16 +750,18 @@ p > strong {
 }
 .hero:focus { outline: none; }
 
-/* Marca CSA (triângulo C-S-A do logo) ao fundo, sutil */
+/* Triângulo decorativo (marca CSA) ao fundo, sutil */
 .hero::before {
   content: "";
   position: absolute;
-  top: 84px;
-  right: 24px;
-  width: 230px;
-  height: 130px;
-  background: url("/images/logo_CSA_RGB.png") center / contain no-repeat;
-  opacity: 0.16;
+  top: -60px;
+  right: -40px;
+  width: 320px;
+  height: 320px;
+  background: var(--color-accent);
+  opacity: 0.10;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  transform: rotate(12deg);
   pointer-events: none;
 }
 /* Faixa diagonal vermelha na base (transição para o conteúdo branco) */
@@ -923,12 +925,13 @@ p > strong {
 .student-success::before {
   content: "";
   position: absolute;
-  left: 28px;
-  bottom: 24px;
-  width: 220px;
-  height: 124px;
-  background: url("/images/logo_CSA_RGB.png") center / contain no-repeat;
-  opacity: 0.14;
+  left: -50px;
+  bottom: -60px;
+  width: 260px;
+  height: 260px;
+  background: var(--color-accent);
+  opacity: 0.10;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
   pointer-events: none;
 }
 .ss-inner {
@@ -1229,12 +1232,14 @@ p > strong {
 .boarding-cta-band::after {
   content: "";
   position: absolute;
-  top: 18px;
-  right: 22px;
-  width: 190px;
-  height: 107px;
-  background: url("/images/logo_CSA_RGB.png") center / contain no-repeat;
-  opacity: 0.16;
+  top: -40px;
+  right: -30px;
+  width: 220px;
+  height: 220px;
+  background: var(--color-accent);
+  opacity: 0.12;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  transform: rotate(10deg);
   pointer-events: none;
 }
 .boarding-cta-band h2 {
