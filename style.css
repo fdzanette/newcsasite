@@ -1494,3 +1494,12 @@ p > strong {
 @media (max-width: 900px) {
   .hero-prova { margin-left: auto; margin-right: auto; }
 }
+
+/* Legenda do mapa: posiciona o mapa como PROVA da abrangência da rede */
+.mapa-legenda {
+  margin-top: 14px;
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+}

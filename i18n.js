@@ -47,12 +47,13 @@
     'vant-6': 'True fluency in English, today’s most important global language.',
 
     /* --- Onde estudar? --- */
-    'eyebrow-onde': 'U.S. Universities',
+    'eyebrow-onde': 'Nationwide network',
     'onde-h': 'Where to <span class="hl">study</span><span class="onde-q">?</span>',
-    'onde-p': 'We work with a broad network of universities across the entire United States — coast to coast. We help each athlete find the right program for their athletic and academic profile.',
+    'onde-p': 'We work with a <strong>broad network of universities across the entire United States — coast to coast</strong>. We help each athlete find the right program for their athletic and academic profile.',
+    'mapa-legenda': 'From north to south, coast to coast — universities across the entire United States.',
 
     /* --- Student Success (padrão de serviço CSA) --- */
-    'ss-h': 'A standard of <span class="hl">excellence</span>',
+    'ss-h': 'Relationships that create <span class="hl">opportunities</span>',
     'ss-p1': 'Our biggest edge is proximity: we talk <strong>directly with university coaching staff</strong>, with no middlemen. It’s this network, built over years, that turns a strong profile into real scholarship opportunities.',
     'ss-p2': 'No two cases are alike. Every student-athlete gets a tailored plan, shaped by their academic and athletic profile and their family’s priorities.',
     'ss-p3': 'And our work doesn’t end at acceptance: we stand by the student-athlete <strong>from the first conversation to enrollment day</strong> — and throughout their entire college life, from everyday challenges to adjusting to a new country.',
