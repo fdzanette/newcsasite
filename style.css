@@ -1489,6 +1489,10 @@ p > strong {
   margin: 6px auto 0;
   color: var(--color-muted);
   font-size: 1rem;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 @media (max-width: 900px) {
