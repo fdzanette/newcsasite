@@ -1330,7 +1330,7 @@ p > strong {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;      /* parallax (desktop) */
+  background-attachment: scroll;     /* rola junto com a seção (sem parallax) */
   overflow: hidden;
 }
 .foto-band::before {                 /* scrim para contraste + profundidade */
@@ -1338,7 +1338,7 @@ p > strong {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg,
-    rgba(9,21,49,.60) 0%, rgba(9,21,49,.40) 45%, rgba(9,21,49,.74) 100%);
+    rgba(9,21,49,.74) 0%, rgba(9,21,49,.62) 45%, rgba(9,21,49,.86) 100%);
 }
 .foto-band-inner {
   position: relative;
@@ -1372,18 +1372,26 @@ p > strong {
   text-shadow: 0 2px 24px rgba(0,0,0,.5);
   margin: 0;
 }
+.foto-band-sub {
+  max-width: 640px;
+  margin: 16px auto 0;
+  color: rgba(255,255,255,.92);
+  font-size: 1.06rem;
+  text-shadow: 0 1px 14px rgba(0,0,0,.45);
+}
+.foto-band .cta-grupo { margin-top: 24px; }
 .foto-band--tennis { background-image: url("/images/CSA_Tennis_Court.jpg"); }
 .foto-band--swim   { background-image: url("/images/CSA_Nat.jpg"); background-position: center 38%; }
 
 /* Student Success: foto do vôlei ao fundo, sob um scrim navy forte */
 .student-success--foto {
   background-image:
-    linear-gradient(135deg, rgba(9,21,49,.88) 0%, rgba(13,30,70,.80) 55%, rgba(9,21,49,.72) 100%),
+    linear-gradient(135deg, rgba(9,21,49,.90) 0%, rgba(13,30,70,.84) 55%, rgba(9,21,49,.82) 100%),
     url("/images/CSA_Volei.jpg");
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 /* Parallax fixo trava/estica no iOS e distrai em telas pequenas → scroll */

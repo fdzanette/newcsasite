@@ -58,8 +58,10 @@
     /* --- Faixas fotográficas (bandas de transição) --- */
     'band-tennis-eyebrow': 'College Sports Authority',
     'band-tennis-h': 'Where talent meets opportunity',
+    'band-tennis-p': 'CSA connects student-athletes with the right U.S. universities, pairing athletic performance with academic growth.',
     'band-swim-eyebrow': 'From training to college',
     'band-swim-h': 'From the first practice to enrollment day',
+    'band-swim-p': 'We guide every step of the student-athlete’s journey — from athletic and academic preparation to earning a scholarship in the U.S.',
 
     /* --- Parceiros --- */
     'eyebrow-parceiros': 'CSA Network',
