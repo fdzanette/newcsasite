@@ -24,8 +24,8 @@
     'cta-whatsapp': '<i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp',
 
     /* --- College Placement --- */
-    'col-intro': '<strong>College Sports Authority</strong> is a consultancy dedicated to guiding student-athletes through the U.S. university admissions process. We support each student from the very first application to graduation day, opening doors to personal and professional growth. <strong>Over our history, we have guided more than 1,300 student-athletes through this journey.</strong>',
-    'col-caminho-h': 'Your path to college <i class="fa-solid fa-arrow-trend-up"></i>',
+    'col-intro': '<strong>College Sports Authority</strong> is a consultancy dedicated to guiding student-athletes through the U.S. university admissions process. We support each student from the very first application to graduation day, opening doors to personal and professional growth. <strong>Over our history, we have guided <span class="hl">more than 1,300 student-athletes</span> through this journey.</strong>',
+    'col-caminho-h': 'Your path to <span class="hl">college</span> <i class="fa-solid fa-arrow-trend-up"></i>',
     'col-caminho-p': 'We help each student strengthen both their skills and their presentation, so they stand out as the strongest candidates for the universities they’re targeting — with the best possible shot at admission. From there, we guide every step of the application: mapping requirements, tracking deadlines, planning document submissions, then reviewing and sending each package. Our support doesn’t end at acceptance — we stay involved throughout all four years of college, offering day-to-day guidance while easing the cultural adjustment.',
     'col-selecao-h': 'Selection <i class="fa-solid fa-magnifying-glass"></i>',
     'col-selecao-p': '<u>The universities that best fit</u> the athlete’s profile, with a focus on real scholarship opportunities.',
@@ -36,7 +36,7 @@
     'fator-exames': 'Admission test scores (TOEFL/SAT)',
     'fator-historico': 'Academic record',
     'fator-financeiro': 'The family’s financial situation',
-    'col-vantagens-h': 'Why study at a U.S. college:',
+    'col-vantagens-h': 'Why study at a <span class="hl">U.S.</span> college:',
     'vant-1': 'A world-leading education system, with universities recognized around the globe.',
     'vant-2': 'Universities with world-class resources to develop your talent.',
     'vant-3': 'A smoother path into the job market, backed by the prestige of these universities and real international experience.',
@@ -46,26 +46,26 @@
 
     /* --- Onde estudar? --- */
     'eyebrow-onde': 'U.S. Universities',
-    'onde-h': 'Where to study<span class="onde-q">?</span>',
+    'onde-h': 'Where to <span class="hl">study</span><span class="onde-q">?</span>',
     'onde-p': 'We work with a broad network of universities across the entire United States — coast to coast. We help each athlete find the right program for their athletic and academic profile.',
 
     /* --- Student Success (padrão de serviço CSA) --- */
-    'ss-h': 'A standard of excellence',
+    'ss-h': 'A standard of <span class="hl">excellence</span>',
     'ss-p1': 'We find and place our student-athletes at the best U.S. universities, according to each one’s academic-athletic profile and personal priorities.',
     'ss-p2': 'Finding the right university is a fully individualized process. We take care of every detail along the academic and athletic preparation journey, building the strongest possible student-athlete profile to present to U.S. university coaches.',
     'ss-p3': 'Placement demands deep expertise and a wide network of relationships: contact is always made directly with the members of each team’s coaching staff. At <strong>College Sports Authority</strong>, we stand by the student-athlete from the very first conversation to enrollment day — and throughout their entire college journey.',
 
     /* --- Faixas fotográficas (bandas de transição) --- */
     'band-tennis-eyebrow': 'College Sports Authority',
-    'band-tennis-h': 'Where talent meets opportunity',
+    'band-tennis-h': 'Where talent meets <span class="hl">opportunity</span>',
     'band-tennis-p': 'CSA connects student-athletes with the right U.S. universities, pairing athletic performance with academic growth.',
     'band-swim-eyebrow': 'From training to college',
-    'band-swim-h': 'From the first practice to enrollment day',
+    'band-swim-h': 'From the first practice to <span class="hl">enrollment day</span>',
     'band-swim-p': 'We guide every step of the student-athlete’s journey — from athletic and academic preparation to earning a scholarship in the U.S.',
 
     /* --- Parceiros --- */
     'eyebrow-parceiros': 'CSA Network',
-    'parceiros-h': 'Our partners',
+    'parceiros-h': 'Our <span class="hl">partners</span>',
 
     /* --- Abas (trilhas de serviço) --- */
     'tab-college': 'College Placement',

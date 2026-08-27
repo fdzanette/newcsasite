@@ -986,8 +986,8 @@ p > strong {
 .secao-parceiros {
   width: 100%;
   max-width: 1120px;
-  /* sem margem superior: o respiro vem do padding da faixa anterior */
-  margin: 0 auto var(--section-spacing);
+  /* respiro padrão acima e abaixo, como as demais seções */
+  margin: var(--section-spacing) auto;
   padding: 0 16px;
   display: block;
 }
@@ -1410,3 +1410,23 @@ p > strong {
   .foto-band,
   .student-success--foto { background-attachment: scroll; }
 }
+
+/* ============================================================
+   REALCE TIPOGRÁFICO (inspiração m7: peso + cor em palavra-chave)
+   ============================================================ */
+/* Palavra-chave destacada dentro de um título/frase */
+.hl { color: var(--color-accent); font-weight: 800; }
+
+/* Títulos de seção mais encorpados (peso black) */
+.conteudo-secundario-titulo,
+.conteudo-terciario-titulo,
+.conteudo-quarto-titulo,
+.onde-titulo,
+.ss-titulo,
+.parceiros-titulo { font-weight: 800; }
+
+/* Ícones dos títulos em vermelho vivo (visível no tema escuro + pop) */
+.conteudo-secundario-titulo i,
+.conteudo-terciario-titulo i,
+.conteudo-quarto-titulo i,
+.selec-orient h2 i { color: var(--color-accent); }
