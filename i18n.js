@@ -26,6 +26,7 @@
     /* --- College Placement --- */
     'eyebrow-college-2': 'Our process',
     'col-intro': '<strong>College Sports Authority</strong> guides student-athletes through the U.S. university admissions process and stands by them throughout their entire college journey — from the first conversation to enrollment day.',
+    'hero-prova-num': '1,300<span class="hero-prova-plus">+</span>',
     'hero-prova-label': 'student-athletes already guided toward U.S. universities',
     'col-caminho-h': 'Your path to <span class="hl">college</span> <i class="fa-solid fa-arrow-trend-up"></i>',
     'col-caminho-p': 'We help each student strengthen both their skills and their presentation, so they stand out as the strongest candidates for the universities they’re targeting — with the best possible shot at admission. From start to finish of the application, we handle every step: mapping requirements and deadlines, planning and reviewing documents, and sending each package.',
