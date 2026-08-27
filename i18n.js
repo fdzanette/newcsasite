@@ -25,7 +25,8 @@
 
     /* --- College Placement --- */
     'eyebrow-college-2': 'Our process',
-    'col-intro': '<strong>College Sports Authority</strong> is a consultancy dedicated to guiding student-athletes through the U.S. university admissions process. We support each student from the very first application to graduation day, opening doors to personal and professional growth. <strong>Over our history, we have guided <span class="hl">more than 1,300 student-athletes</span> through this journey.</strong>',
+    'col-intro': '<strong>College Sports Authority</strong> guides student-athletes through the U.S. university admissions process and stands by them throughout their entire college journey — from the first conversation to enrollment day.',
+    'hero-prova-label': 'student-athletes already guided toward U.S. universities',
     'col-caminho-h': 'Your path to <span class="hl">college</span> <i class="fa-solid fa-arrow-trend-up"></i>',
     'col-caminho-p': 'We help each student strengthen both their skills and their presentation, so they stand out as the strongest candidates for the universities they’re targeting — with the best possible shot at admission. From start to finish of the application, we handle every step: mapping requirements and deadlines, planning and reviewing documents, and sending each package.',
     'col-selecao-h': 'Selection <i class="fa-solid fa-magnifying-glass"></i>',
@@ -55,6 +56,9 @@
     'ss-p1': 'Our biggest edge is proximity: we talk <strong>directly with university coaching staff</strong>, with no middlemen. It’s this network, built over years, that turns a strong profile into real scholarship opportunities.',
     'ss-p2': 'No two cases are alike. Every student-athlete gets a tailored plan, shaped by their academic and athletic profile and their family’s priorities.',
     'ss-p3': 'And our work doesn’t end at acceptance: we stand by the student-athlete <strong>from the first conversation to enrollment day</strong> — and throughout their entire college life, from everyday challenges to adjusting to a new country.',
+    'pilar-contato': 'Direct contact with university coaching staff',
+    'pilar-rede': 'A broad network of universities across the United States',
+    'pilar-acompanhamento': 'Support from the first conversation to enrollment day',
 
     /* --- Faixas fotográficas (bandas de transição) --- */
     'band-tennis-eyebrow': 'College Sports Authority',
@@ -67,6 +71,7 @@
     /* --- Parceiros --- */
     'eyebrow-parceiros': 'CSA Network',
     'parceiros-h': 'Our <span class="hl">partners</span>',
+    'parceiros-sub': 'Academies, clubs and brands that are part of the College Sports Authority network.',
 
     /* --- Abas (trilhas de serviço) --- */
     'tab-college': 'College Placement',

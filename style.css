@@ -1430,3 +1430,67 @@ p > strong {
 .conteudo-terciario-titulo i,
 .conteudo-quarto-titulo i,
 .selec-orient h2 i { color: var(--color-accent); }
+
+/* ============================================================
+   PROVA SOCIAL / CREDIBILIDADE (refino conservador)
+   ============================================================ */
+/* Hero: destaque do número 1.300+ como prova social */
+.hero-prova {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 500px;
+  margin: 22px 0 6px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 12px;
+}
+.hero-prova-num {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2rem, 4.4vw, 2.9rem);
+  line-height: 1;
+  color: #fff;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.hero-prova-plus { color: var(--color-accent); }
+.hero-prova-label {
+  font-size: 0.96rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+/* Student Success: pilares de credibilidade (ícone + fato) */
+.ss-pilares { margin-top: 30px; }
+.ss-pilar {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius);
+  padding: 26px 20px;
+  text-align: center;
+  transition: transform .25s ease, background .25s ease;
+}
+.ss-pilar:hover { transform: translateY(-6px); background: rgba(255, 255, 255, 0.10); }
+.ss-pilar .fator-icone { margin: 0 auto 14px; }
+.ss-pilar p {
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Parceiros: subtítulo de rede/relacionamento */
+.parceiros-sub {
+  max-width: 640px;
+  margin: 6px auto 0;
+  color: var(--color-muted);
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .hero-prova { margin-left: auto; margin-right: auto; }
+}

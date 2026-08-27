@@ -29,6 +29,7 @@
     '.parceiros-head',
     '.logo-card',
     '.foto-band-inner',
+    '.ss-pilar',
     '.boarding-abertura',
     '.passo-card',
     '.escola-card',
