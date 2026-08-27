@@ -27,7 +27,7 @@
     'eyebrow-college-2': 'Our process',
     'col-intro': '<strong>College Sports Authority</strong> is a consultancy dedicated to guiding student-athletes through the U.S. university admissions process. We support each student from the very first application to graduation day, opening doors to personal and professional growth. <strong>Over our history, we have guided <span class="hl">more than 1,300 student-athletes</span> through this journey.</strong>',
     'col-caminho-h': 'Your path to <span class="hl">college</span> <i class="fa-solid fa-arrow-trend-up"></i>',
-    'col-caminho-p': 'We help each student strengthen both their skills and their presentation, so they stand out as the strongest candidates for the universities they’re targeting — with the best possible shot at admission. From there, we guide every step of the application: mapping requirements, tracking deadlines, planning document submissions, then reviewing and sending each package. Our support doesn’t end at acceptance — we stay involved throughout all four years of college, offering day-to-day guidance while easing the cultural adjustment.',
+    'col-caminho-p': 'We help each student strengthen both their skills and their presentation, so they stand out as the strongest candidates for the universities they’re targeting — with the best possible shot at admission. From start to finish of the application, we handle every step: mapping requirements and deadlines, planning and reviewing documents, and sending each package.',
     'col-selecao-h': 'Selection <i class="fa-solid fa-magnifying-glass"></i>',
     'col-selecao-p': '<u>The universities that best fit</u> the athlete’s profile, with a focus on real scholarship opportunities.',
     'col-orientacao-h': 'Guidance <i class="fa-solid fa-landmark"></i>',
@@ -52,9 +52,9 @@
 
     /* --- Student Success (padrão de serviço CSA) --- */
     'ss-h': 'A standard of <span class="hl">excellence</span>',
-    'ss-p1': 'We find and place our student-athletes at the best U.S. universities, according to each one’s academic-athletic profile and personal priorities.',
-    'ss-p2': 'Finding the right university is a fully individualized process. We handle every detail of the academic and athletic preparation, building the strongest possible profile for each student-athlete.',
-    'ss-p3': 'Placement demands deep expertise and a wide network of relationships: contact is always made directly with the members of each team’s coaching staff. At <strong>College Sports Authority</strong>, we stand by the student-athlete from the very first conversation to enrollment day — and throughout their entire college journey.',
+    'ss-p1': 'Our biggest edge is proximity: we talk <strong>directly with university coaching staff</strong>, with no middlemen. It’s this network, built over years, that turns a strong profile into real scholarship opportunities.',
+    'ss-p2': 'No two cases are alike. Every student-athlete gets a tailored plan, shaped by their academic and athletic profile and their family’s priorities.',
+    'ss-p3': 'And our work doesn’t end at acceptance: we stand by the student-athlete <strong>from the first conversation to enrollment day</strong> — and throughout their entire college life, from everyday challenges to adjusting to a new country.',
 
     /* --- Faixas fotográficas (bandas de transição) --- */
     'band-tennis-eyebrow': 'College Sports Authority',
@@ -62,7 +62,7 @@
     'band-tennis-p': 'CSA connects student-athletes with the right U.S. universities, pairing athletic performance with academic growth.',
     'band-swim-eyebrow': 'Your journey',
     'band-swim-h': 'From the first practice to <span class="hl">enrollment day</span>',
-    'band-swim-p': 'We guide every step of the student-athlete’s journey — from athletic and academic preparation to earning a scholarship in the U.S.',
+    'band-swim-p': 'Every training session brings the student-athlete closer to a spot — and a scholarship — at a U.S. university.',
 
     /* --- Parceiros --- */
     'eyebrow-parceiros': 'CSA Network',
@@ -83,7 +83,7 @@
     /* --- Boarding: caminho --- */
     'eyebrow-boarding-2': 'Boarding School Placement',
     'hs-caminho-h': 'Your path to boarding school in the U.S. <i class="fa-solid fa-school-flag"></i>',
-    'hs-caminho-p': 'An American boarding school is where it all starts. For students aged 14 to 17, it’s a chance to grow in the classroom, develop in their sport, and experience American culture early on — building a strong profile from day one that can open the door to future university opportunities.',
+    'hs-caminho-p': 'For student-athletes aged 14 to 17, an American boarding school is the chance to grow in the classroom, develop in their sport, and experience American culture while still in secondary school — building a strong profile from day one that can open the door to future university opportunities.',
 
     /* --- Boarding: como funciona (etapas) --- */
     'hs-como-h': 'How it works <i class="fa-solid fa-list-check"></i>',
