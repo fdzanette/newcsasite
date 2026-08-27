@@ -28,6 +28,7 @@
     '.stat-card',
     '.parceiros-head',
     '.logo-card',
+    '.foto-band-inner',
     '.boarding-abertura',
     '.passo-card',
     '.escola-card',

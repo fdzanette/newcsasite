@@ -1312,3 +1312,86 @@ p > strong {
 
 /* Cartões dos parceiros permanecem CLAROS (logos são feitos p/ fundo claro) */
 .logo-card { background: #fff; }
+
+/* ============================================================
+   FAIXAS FOTOGRÁFICAS (backgrounds cinematográficos full-bleed)
+   Usa as fotos com marca CSA como bandas de destaque/transição.
+   Scrim navy garante legibilidade do texto branco sobre a foto.
+   ============================================================ */
+.foto-band {
+  position: relative;
+  width: 100%;
+  min-height: clamp(260px, 42vh, 460px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--section-spacing) 20px;
+  background-color: var(--color-header);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;      /* parallax (desktop) */
+  overflow: hidden;
+}
+.foto-band::before {                 /* scrim para contraste + profundidade */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(9,21,49,.60) 0%, rgba(9,21,49,.40) 45%, rgba(9,21,49,.74) 100%);
+}
+.foto-band-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  text-align: center;
+  color: #fff;
+}
+.foto-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(255,255,255,.16);
+  padding: 6px 15px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+.foto-band-titulo {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  line-height: 1.14;
+  letter-spacing: -0.01em;
+  color: #fff;
+  text-shadow: 0 2px 24px rgba(0,0,0,.5);
+  margin: 0;
+}
+.foto-band--tennis { background-image: url("/images/CSA_Tennis_Court.jpg"); }
+.foto-band--swim   { background-image: url("/images/CSA_Nat.jpg"); background-position: center 38%; }
+
+/* Student Success: foto do vôlei ao fundo, sob um scrim navy forte */
+.student-success--foto {
+  background-image:
+    linear-gradient(135deg, rgba(9,21,49,.88) 0%, rgba(13,30,70,.80) 55%, rgba(9,21,49,.72) 100%),
+    url("/images/CSA_Volei.jpg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Parallax fixo trava/estica no iOS e distrai em telas pequenas → scroll */
+@media (max-width: 820px) {
+  .foto-band { background-attachment: scroll; min-height: clamp(220px, 34vh, 320px); }
+  .student-success--foto { background-attachment: scroll; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .foto-band,
+  .student-success--foto { background-attachment: scroll; }
+}

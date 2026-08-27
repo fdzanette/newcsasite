@@ -55,6 +55,12 @@
     'ss-p2': 'Finding the right university is a fully individualized process. We take care of every detail along the academic and athletic preparation journey, building the strongest possible student-athlete profile to present to U.S. university coaches.',
     'ss-p3': 'Placement demands deep expertise and a wide network of relationships: contact is always made directly with the members of each team’s coaching staff. At <strong>College Sports Authority</strong>, we stand by the student-athlete from the very first conversation to enrollment day — and throughout their entire college journey.',
 
+    /* --- Faixas fotográficas (bandas de transição) --- */
+    'band-tennis-eyebrow': 'College Sports Authority',
+    'band-tennis-h': 'Where talent meets opportunity',
+    'band-swim-eyebrow': 'From training to college',
+    'band-swim-h': 'From the first practice to enrollment day',
+
     /* --- Parceiros --- */
     'eyebrow-parceiros': 'CSA Network',
     'parceiros-h': 'Our partners',
