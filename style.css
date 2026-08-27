@@ -850,7 +850,9 @@ p > strong {
    ============================================================ */
 /* Bloco anterior (vantagens) encosta na faixa "Onde estudar?":
    zera a margem para não somar com o padding da faixa. */
-.conteudo-quarto { margin-bottom: 0.5rem; }
+/* Último bloco de texto antes de uma faixa full-bleed: sem margem
+   inferior — o respiro vem do padding da faixa (evita gap dobrado). */
+.conteudo-quarto { margin-bottom: 0; }
 
 .onde-estudar {
   width: 100%;
@@ -984,7 +986,8 @@ p > strong {
 .secao-parceiros {
   width: 100%;
   max-width: 1120px;
-  margin: var(--section-spacing) auto;
+  /* sem margem superior: o respiro vem do padding da faixa anterior */
+  margin: 0 auto var(--section-spacing);
   padding: 0 16px;
   display: block;
 }
@@ -1378,6 +1381,10 @@ p > strong {
   color: rgba(255,255,255,.92);
   font-size: 1.06rem;
   text-shadow: 0 1px 14px rgba(0,0,0,.45);
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 .foto-band .cta-grupo { margin-top: 24px; }
 .foto-band--tennis { background-image: url("/images/CSA_Tennis_Court.jpg"); }
