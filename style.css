@@ -1233,7 +1233,7 @@ p > strong {
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .logos-grid { grid-template-columns: repeat(3, 1fr); }
   /* Etapas do processo empilham no mobile (evita colunas espremidas) */
-  .passos-grid { grid-template-columns: 1fr; gap: 16px; }
+  .passos-grid { gap: 16px; }
   .passo-num { font-size: 2.2rem; }
 }
 
@@ -1542,3 +1542,11 @@ p > strong {
   color: var(--color-muted);
 }
 .seg-grid { margin-top: 26px; }
+
+/* Mobile: a barra de abas empilha em 2 linhas, aumentando a área fixa no
+   topo — compensa o scroll-margin p/ o título do painel não ficar sob a
+   nav ao trocar de trilha (WCAG 2.4.11). */
+@media (max-width: 768px) {
+  .conteudo-principal,
+  .hero { scroll-margin-top: 228px; }
+}

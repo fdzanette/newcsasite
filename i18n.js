@@ -21,18 +21,18 @@
 
     /* --- botões de CTA (compartilhados) --- */
     'cta-contato': 'Get in touch',
-    'cta-whatsapp': '<i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp',
+    'cta-whatsapp': '<i aria-hidden="true" class="fa-brands fa-whatsapp"></i> Chat on WhatsApp',
 
     /* --- College Placement --- */
     'eyebrow-college-2': 'Our process',
     'col-intro': '<strong>College Sports Authority</strong> guides student-athletes through the U.S. university admissions process and stands by them throughout their entire college journey — from the first conversation to enrollment day.',
     'hero-prova-num': '1,300<span class="hero-prova-plus">+</span>',
     'hero-prova-label': 'student-athletes already guided toward U.S. universities',
-    'col-caminho-h': 'Your path to <span class="hl">college</span> <i class="fa-solid fa-arrow-trend-up"></i>',
+    'col-caminho-h': 'Your path to <span class="hl">college</span> <i aria-hidden="true" class="fa-solid fa-arrow-trend-up"></i>',
     'col-caminho-p': 'We help each student strengthen both their skills and their presentation, so they stand out as the strongest candidates for the universities they’re targeting — with the best possible shot at admission. From start to finish of the application, we handle every step: mapping requirements and deadlines, planning and reviewing documents, and sending each package.',
-    'col-selecao-h': 'Selection <i class="fa-solid fa-magnifying-glass"></i>',
+    'col-selecao-h': 'Selection <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>',
     'col-selecao-p': '<u>The universities that best fit</u> the athlete’s profile, with a focus on real scholarship opportunities.',
-    'col-orientacao-h': 'Guidance <i class="fa-solid fa-landmark"></i>',
+    'col-orientacao-h': 'Guidance <i aria-hidden="true" class="fa-solid fa-landmark"></i>',
     'col-orientacao-p': '<u>Preparing the athlete</u> to make a strong first impression on the coaches at the universities we’ve selected.',
     'col-fatores-h': 'The size of the scholarship depends on several factors:',
     'fator-desempenho': 'Athletic performance',
@@ -86,23 +86,24 @@
     'chip-idade': 'Ages 14–17',
     'chip-nivel': 'Secondary school in the U.S.',
     'chip-campus': 'Live, study & train on campus',
-    'hs-prova': 'The same CSA that has guided <span class="hl">1,300+ student-athletes</span> to U.S. College Placement now opens the boarding-school path.',
+    'chip-suporte': 'Support in Portuguese',
+    'hs-prova': 'The same CSA that has guided <span class="hl">1,300+ student-athletes</span> to U.S. College Placement now opens the boarding-school track — to begin that journey while still in secondary school.',
     'cta-nota': 'Start with a no-commitment evaluation conversation.',
 
     /* --- Boarding: caminho --- */
     'eyebrow-boarding-2': 'The journey',
-    'hs-caminho-h': 'Your path to <span class="hl">boarding school</span> in the U.S. <i class="fa-solid fa-school-flag"></i>',
+    'hs-caminho-h': 'Your path to <span class="hl">boarding school</span> in the U.S. <i aria-hidden="true" class="fa-solid fa-school-flag"></i>',
     'hs-caminho-p': 'For student-athletes aged 14 to 17, an American boarding school is the chance to grow in the classroom, develop in their sport, and experience American culture while still in secondary school — building a strong profile from day one that can open the door to future university opportunities.',
 
     /* --- Boarding: como funciona (etapas) --- */
-    'hs-como-h': 'How it works <i class="fa-solid fa-list-check"></i>',
-    'hs-avaliacao-h': 'Assessment <i class="fa-solid fa-clipboard-check"></i>',
+    'hs-como-h': 'How it works <i aria-hidden="true" class="fa-solid fa-list-check"></i>',
+    'hs-avaliacao-h': 'Assessment <i aria-hidden="true" class="fa-solid fa-clipboard-check"></i>',
     'hs-avaliacao-p': '<u>An academic, athletic, and family assessment</u> to understand where the student stands, what they’re aiming for, and their family circumstances — before we recommend anything.',
-    'hs-matching-h': 'School Matching <i class="fa-solid fa-people-arrows"></i>',
+    'hs-matching-h': 'School Matching <i aria-hidden="true" class="fa-solid fa-people-arrows"></i>',
     'hs-matching-p': '<u>Finding the schools that fit best</u> — not the most famous name, but the right match for the student’s academic, athletic, and personal goals.',
-    'hs-aplicacao-h': 'Application <i class="fa-solid fa-file-signature"></i>',
+    'hs-aplicacao-h': 'Application <i aria-hidden="true" class="fa-solid fa-file-signature"></i>',
     'hs-aplicacao-p': '<u>Support through the application</u>: documents, English tests (Duolingo / TOEFL Junior) and deadlines — every application prepared and submitted together with you.',
-    'hs-chegada-h': 'Arrival &amp; integration <i class="fa-solid fa-plane-arrival"></i>',
+    'hs-chegada-h': 'Arrival &amp; integration <i aria-hidden="true" class="fa-solid fa-plane-arrival"></i>',
     'hs-chegada-p': '<u>Support on arrival</u> and settling into the school routine and life in the U.S., so the transition is safe.',
 
     /* --- Boarding: a boarding school americana --- */
@@ -117,12 +118,12 @@
     'eyebrow-seguranca': 'For the family',
     'hs-seg-h': 'Peace of mind at <span class="hl">every step</span>',
     'hs-seg-p': 'Sending a 14-to-17-year-old to study abroad is a family decision. That’s why every detail is designed to keep the experience safe — from the environment to the adjustment.',
-    'seg-1': 'A supervised residential environment, right on the school’s own campus',
-    'seg-2': 'A study routine and academic support, with ESL (English) depending on the school',
-    'seg-3': 'CSA supports the arrival and integration into the school routine',
+    'seg-1': 'Housing right on campus, with the school’s residential staff (<em>dorm parents</em>)',
+    'seg-2': 'A college-prep curriculum, academic support and ESL (English) depending on the school',
+    'seg-3': 'CSA support in Portuguese — from the process to arrival and the first days',
 
     /* --- Boarding: FAQ --- */
-    'hs-faq-h': 'Frequently asked questions <i class="fa-solid fa-circle-question"></i>',
+    'hs-faq-h': 'Frequently asked questions <i aria-hidden="true" class="fa-solid fa-circle-question"></i>',
     'faq-q1': 'At what age can I apply?',
     'faq-a1': 'CSA’s Boarding School Placement is for student-athletes aged <strong>14 to 17</strong>. The best time to start depends on the student’s current school year in Brazil and their academic and athletic goals — something we work out together during the Assessment stage.',
     'faq-q2': 'Do I need an English test?',
