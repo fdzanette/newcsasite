@@ -1507,3 +1507,38 @@ p > strong {
   font-size: 0.92rem;
   font-weight: 500;
 }
+
+/* ============================================================
+   BOARDING — refino AAA (prova social, microcopy, segurança)
+   ============================================================ */
+/* Ponte de credibilidade na abertura (usa o histórico real do College) */
+.boarding-prova {
+  max-width: 700px;
+  margin: 6px auto 0;
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 1.02rem;
+}
+
+/* Microcopy "sem compromisso" abaixo dos CTAs */
+.cta-nota {
+  margin: 14px 0 0;
+  font-size: 0.9rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.72);
+}
+.boarding-abertura .cta-nota { color: var(--color-muted); }
+
+/* Processo agora com 4 etapas (01–04) */
+.passos-grid { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1040px) { .passos-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px)  { .passos-grid { grid-template-columns: 1fr; } }
+
+/* Seção "Para a família" (tranquilidade / diferencial) */
+.boarding-seguranca .seg-intro {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--color-muted);
+}
+.seg-grid { margin-top: 26px; }
