@@ -1493,7 +1493,10 @@ p > strong {
 .boarding-prova {
   max-width: 700px;
   margin: 6px auto 0;
-  text-align: center;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
   color: var(--color-muted);
   font-size: 1.02rem;
 }
@@ -1516,7 +1519,10 @@ p > strong {
 .boarding-seguranca .seg-intro {
   max-width: 720px;
   margin: 0 auto;
-  text-align: center;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
   color: var(--color-muted);
 }
 .seg-grid { margin-top: 26px; }
