@@ -109,10 +109,6 @@
     /* --- Boarding: a boarding school americana --- */
     'hs-tipos-h': 'The <span class="hl">American</span> boarding school',
     'escola-boarding-p': 'Boarding schools in the United States are far more than places to study — they are true ecosystems where the student-athlete lives, studies, and trains on one campus throughout the entire school year. Alongside full academic and extracurricular programs, many of these schools offer highly competitive, top-tier athletic facilities that become a central part of the student experience.<br><br>A boarding school exchange is the ideal gateway for students already in — or about to enter — secondary school who want a transformative experience abroad: studying in an environment of excellence while competing on a high-level team, with all the athletic infrastructure that only the United States can offer.',
-    'dest-campus': 'Live, study & train on one campus',
-    'dest-esporte': 'Top-tier athletic facilities',
-    'dest-academico': 'Full academic program',
-    'dest-cultura': 'Cultural immersion from the start',
 
     /* --- Boarding: tranquilidade para a família --- */
     'eyebrow-seguranca': 'For the family',

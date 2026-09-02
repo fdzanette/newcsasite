@@ -33,7 +33,6 @@
     '.boarding-abertura',
     '.passo-card',
     '.escola-card',
-    '.destaque-card',
     '.faq-item',
     '.boarding-cta-band'
   ];
