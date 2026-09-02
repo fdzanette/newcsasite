@@ -80,15 +80,12 @@
     'tab-highschool': 'Boarding School Placement',
 
     /* --- Boarding School Placement: abertura --- */
-    'eyebrow-boarding': 'New CSA track',
     'hs-titulo': 'Boarding School Placement',
     'hs-intro': '<strong>Boarding School Placement</strong> is the first step of an academic and athletic journey in the United States. CSA places student-athletes aged <strong>14 to 17</strong> in American boarding schools, where academics and sport grow side by side. It’s a stage that can later lead into College Placement, though it doesn’t have&nbsp;to.',
     'chip-idade': 'Ages 14–17',
     'chip-nivel': 'Secondary school in the U.S.',
     'chip-campus': 'Live, study & train on campus',
-    'chip-suporte': 'Support in Portuguese',
     'hs-prova': 'The same CSA that has guided <span class="hl">1,300+ student-athletes</span> to U.S. College Placement now opens the boarding-school track — to begin that journey while still in secondary school.',
-    'cta-nota': 'Start with a no-commitment evaluation conversation.',
 
     /* --- Boarding: caminho --- */
     'eyebrow-boarding-2': 'The journey',
@@ -116,7 +113,6 @@
     'hs-seg-p': 'Sending a 14-to-17-year-old to study abroad is a family decision. That’s why every detail is designed to keep the experience safe — from the environment to the adjustment.',
     'seg-1': 'Housing right on campus, with the school’s residential staff (<em>dorm parents</em>)',
     'seg-2': 'A college-prep curriculum, academic support and ESL (English) depending on the school',
-    'seg-3': 'CSA support in Portuguese — from the process to arrival and the first days',
 
     /* --- Boarding: FAQ --- */
     'hs-faq-h': 'Frequently asked questions <i aria-hidden="true" class="fa-solid fa-circle-question"></i>',
