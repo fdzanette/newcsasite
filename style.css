@@ -20,6 +20,7 @@
   --font-body: 'Inter', 'Segoe UI', Arial, sans-serif;
 
   --content-max: 1080px;
+  --measure: 760px;              /* largura de leitura padrão dos parágrafos (mesma distância da margem em toda a página) */
   --section-spacing: 2.5rem;     /* respiro padrão entre seções */
   --radius: 14px;
   --radius-lg: 20px;
@@ -324,6 +325,9 @@ p > strong {
 
 .conteudo-secundario-paragrafo {
   color: var(--color-muted);
+  max-width: var(--measure);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Padroniza os parágrafos de leitura: justificado nos dois idiomas,
@@ -877,6 +881,9 @@ p > strong {
 .onde-paragrafo {
   color: var(--color-muted);
   font-size: 1.05rem;
+  max-width: var(--measure);
+  margin-left: auto;
+  margin-right: auto;
   text-align: justify;
   text-justify: inter-word;
   -webkit-hyphens: auto;
@@ -919,7 +926,7 @@ p > strong {
 }
 .ss-head { max-width: 760px; margin: 0 auto 22px; }
 .ss-texto {
-  max-width: 840px;
+  max-width: var(--measure);
   margin: 0 auto;
   text-align: justify;
   text-justify: inter-word;
@@ -1053,7 +1060,7 @@ p > strong {
 }
 .boarding-abertura .conteudo-principal-titulo { padding-bottom: 10px; }
 .boarding-intro {
-  max-width: 720px;
+  max-width: var(--measure);
   margin: 0 auto;
   text-align: justify;
   text-justify: inter-word;
@@ -1193,8 +1200,12 @@ p > strong {
 }
 .boarding-cta-band p {
   color: rgba(255,255,255,0.86);
-  max-width: 620px;
+  max-width: var(--measure);
   margin: 0 auto 22px;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 .boarding-cta-band .cta-grupo { margin-top: 0; }
 
@@ -1354,7 +1365,7 @@ p > strong {
   margin: 0;
 }
 .foto-band-sub {
-  max-width: 640px;
+  max-width: var(--measure);
   margin: 16px auto 0;
   color: rgba(255,255,255,.92);
   font-size: 1.06rem;
@@ -1463,7 +1474,7 @@ p > strong {
 
 /* Parceiros: subtítulo de rede/relacionamento */
 .parceiros-sub {
-  max-width: 640px;
+  max-width: var(--measure);
   margin: 6px auto 0;
   color: var(--color-muted);
   font-size: 1rem;
@@ -1491,7 +1502,7 @@ p > strong {
    ============================================================ */
 /* Ponte de credibilidade na abertura (usa o histórico real do College) */
 .boarding-prova {
-  max-width: 700px;
+  max-width: var(--measure);
   margin: 6px auto 0;
   text-align: justify;
   text-justify: inter-word;
@@ -1517,7 +1528,7 @@ p > strong {
 
 /* Seção "Para a família" (tranquilidade / diferencial) */
 .boarding-seguranca .seg-intro {
-  max-width: 720px;
+  max-width: var(--measure);
   margin: 0 auto;
   text-align: justify;
   text-justify: inter-word;
