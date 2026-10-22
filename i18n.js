@@ -80,6 +80,7 @@
     'tab-highschool': 'Boarding School Placement',
 
     /* --- Boarding School Placement: abertura --- */
+    'eyebrow-intercambio': 'Sports exchange in the USA',
     'hs-titulo': 'Boarding School Placement',
     'hs-intro': '<strong>Boarding School Placement</strong> is the first step of an academic and athletic journey in the United States. CSA places student-athletes aged <strong>14 to 17</strong> in American boarding schools, where academics and sport grow side by side. It’s a stage that can later lead into College Placement, though it doesn’t have&nbsp;to.',
     'chip-idade': 'Ages 14–17',
@@ -105,7 +106,7 @@
 
     /* --- Boarding: a boarding school americana --- */
     'hs-tipos-h': 'The <span class="hl">American</span> boarding school',
-    'escola-boarding-p': 'Boarding schools in the United States are far more than places to study — they are true ecosystems where the student-athlete lives, studies, and trains on one campus throughout the entire school year. Alongside full academic and extracurricular programs, many of these schools offer highly competitive, top-tier athletic facilities that become a central part of the student experience.<br><br>A boarding school exchange is the ideal gateway for students already in — or about to enter — secondary school who want a transformative experience abroad: studying in an environment of excellence while competing on a high-level team, with all the athletic infrastructure that only the United States can offer.',
+    'escola-boarding-p': 'Boarding schools in the United States are far more than places to study — they are true ecosystems where the student-athlete lives, studies, and trains on one campus throughout the entire school year. Alongside full academic and extracurricular programs, many of these schools offer highly competitive, top-tier athletic facilities that become a central part of the student experience.<br><br>A sports boarding-school exchange is the ideal gateway for students already in — or about to enter — secondary school who want a transformative experience abroad: studying in an environment of excellence while competing on a high-level team, with all the athletic infrastructure that only the United States can offer.',
 
     /* --- Boarding: tranquilidade para a família --- */
     'eyebrow-seguranca': 'For the family',
