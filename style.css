@@ -1545,3 +1545,127 @@ p > strong {
   .conteudo-principal,
   .hero { scroll-margin-top: 228px; }
 }
+
+/* ============================================================
+   DEPOIMENTOS (prova social — College)
+   ============================================================ */
+.depoimentos {
+  width: 92%;
+  max-width: var(--content-max);
+  margin: var(--section-spacing) auto 0;
+}
+.depo-head { text-align: center; margin-bottom: 8px; }
+.depo-titulo {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-weight: 800;
+  line-height: 1.14;
+  margin: 0;
+}
+.depo-grid { align-items: stretch; }
+.depo-card {
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 26px 24px 22px;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), background var(--transition);
+}
+.depo-card:hover { transform: translateY(-6px); background: rgba(255, 255, 255, 0.04); }
+.depo-aspas {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: rgba(228, 37, 53, 0.14);
+  color: var(--color-accent);
+  font-size: 1.05rem;
+}
+.depo-quote {
+  margin: 0;
+  color: var(--color-ink);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  flex: 1 1 auto;
+}
+.depo-quote::before { content: "\201C"; }
+.depo-quote::after  { content: "\201D"; }
+.depo-autor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 14px;
+}
+.depo-foto {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+.depo-autor-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.depo-nome {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: #fff;
+}
+.depo-uni {
+  font-size: 0.86rem;
+  color: var(--color-muted);
+}
+/* faixa de fecho (tagline) */
+.depo-band {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin: 28px auto 0;
+  padding: 24px 28px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--color-header) 0%, var(--color-soft) 100%);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+}
+.depo-band-icone {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  background: rgba(230, 200, 121, 0.14);
+  color: #e6c879;
+  font-size: 1.5rem;
+}
+.depo-band-txt {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  font-weight: 600;
+  line-height: 1.22;
+}
+.depo-band-txt strong { font-weight: 800; }
+.depo-band-hl { color: #e6c879; font-weight: 800; }
+@media (max-width: 620px) {
+  .depo-band { flex-direction: column; text-align: center; gap: 14px; }
+}

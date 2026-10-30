@@ -75,6 +75,14 @@
     'parceiros-h': 'Our <span class="hl">partners</span>',
     'parceiros-sub': 'Academies, clubs and brands that are part of the College Sports Authority network.',
 
+    /* --- Depoimentos (prova social — College) --- */
+    'eyebrow-depoimentos': 'Testimonials',
+    'depo-h': 'Those who lived the process <span class="hl">know the difference</span>',
+    'depo-q1': 'I didn’t want to come here — until I first talked to Gustavo. He opened my eyes and I’m very grateful for all the help throughout the process. I had millions of questions and he truly understands everything about it, so I felt a lot more confident.',
+    'depo-q2': 'I thank the whole team from the bottom of my heart — we’ve known each other for a long time! I consider him a brother; he always helped me and told me the pros and cons. On top of that, the bureaucratic side was handled by the CSA team in the best possible way — practical and hassle-free.',
+    'depo-q3': 'CSA definitely helped me a lot in choosing my university. I ended up deciding to study in the United States at the very last minute. But that was not a problem at all. Gustavo was always present and very dedicated to finding the best choice for me.',
+    'depo-band': '<strong>More than completed placements,</strong> <span class="depo-band-hl">relationships built for life.</span>',
+
     /* --- Abas (trilhas de serviço) --- */
     'tab-college': 'College Placement',
     'tab-highschool': 'Boarding School Placement',
